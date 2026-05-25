@@ -15,6 +15,7 @@ const inter = Inter({
   weight: ["300", "400", "500", "600"],
 });
 
+
 export const metadata: Metadata = {
   title: "The Athos Group — From Idea to Impact",
   description:
