@@ -44,7 +44,7 @@ const team = [
   {
     name: "Will Harwood",
     title: "Strategic Advisor",
-    photo: null,
+    photo: "/images/will-harwood-headshot.png",
     bio: "15+ years in international communications and public affairs. Former Head of Communications at Lidl US, generating $500M+ in earned media. Expertise in media relations, crisis communications, and strategic storytelling.",
   },
   {
@@ -57,7 +57,7 @@ const team = [
   {
     name: "Gerry O'Sullivan",
     title: "Senior Advisor, Accreditation & Compliance",
-    photo: null,
+    photo: "/images/gerry-osullivan-headshot.png",
     bio: "30+ years in independent higher education across faculty, provost, and consultant roles. Extensive accreditation experience including authoring reports and serving agencies. Led start-ups, mergers, and program development with deep budgeting and compliance expertise.",
   },
   {
@@ -106,7 +106,7 @@ export default function OurPeoplePage() {
         style={{ background: CREAM }}
       >
         <div className="max-w-7xl mx-auto">
-          <div className="flex items-center gap-4 mb-16">
+          <div className="flex items-center justify-center gap-4 mb-16">
             <span className="block w-10 h-px" style={{ background: NAVY }} />
             <span
               className="text-xs font-medium tracking-[0.3em] uppercase"
@@ -116,11 +116,11 @@ export default function OurPeoplePage() {
             </span>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12 lg:gap-20 max-w-4xl">
+          <div className="grid md:grid-cols-2 gap-12 lg:gap-20 max-w-4xl mx-auto">
             {foundingPartners.map((person) => (
-              <div key={person.name} className="group">
+              <div key={person.name} className="group flex flex-col items-center text-center">
                 <div
-                  className="relative overflow-hidden mb-8 max-w-[240px]"
+                  className="relative overflow-hidden mb-8 w-full max-w-[240px]"
                   style={{ aspectRatio: "3/4" }}
                 >
                   <Image

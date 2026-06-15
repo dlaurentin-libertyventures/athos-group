@@ -1,5 +1,4 @@
-import Image from "next/image";
-import { LOGO_WHITE, NAVY, CREAM } from "@/lib/brand";
+import { NAVY, CREAM } from "@/lib/brand";
 
 interface PageHeaderProps {
   eyebrow: string;
@@ -11,14 +10,6 @@ export default function PageHeader({ eyebrow, title, subtitle }: PageHeaderProps
   return (
     <section style={{ background: NAVY }} className="pt-16">
       <div className="max-w-7xl mx-auto px-6 lg:px-16 pt-20 pb-24 lg:pb-32">
-        <Image
-          src={LOGO_WHITE}
-          alt=""
-          aria-hidden
-          width={120}
-          height={42}
-          className="h-8 w-auto mb-10 opacity-70"
-        />
         <div className="flex items-center gap-4 mb-8">
           <span className="block w-10 h-px" style={{ background: CREAM, opacity: 0.3 }} />
           <span
