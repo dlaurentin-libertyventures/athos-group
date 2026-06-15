@@ -40,13 +40,21 @@ export default function Nav() {
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
         >
-          <span className={`block w-6 h-px bg-[#F8F5EE] transition-all duration-300 ${menuOpen ? "rotate-45 translate-y-[7px]" : ""}`} />
-          <span className={`block w-6 h-px bg-[#F8F5EE] transition-all duration-300 ${menuOpen ? "opacity-0" : ""}`} />
-          <span className={`block w-6 h-px bg-[#F8F5EE] transition-all duration-300 ${menuOpen ? "-rotate-45 -translate-y-[7px]" : ""}`} />
+          <span
+            className={`block w-6 h-px bg-[#F8F5EE] transition-all duration-300 ${menuOpen ? "rotate-45 translate-y-[7px]" : ""}`}
+          />
+          <span
+            className={`block w-6 h-px bg-[#F8F5EE] transition-all duration-300 ${menuOpen ? "opacity-0" : ""}`}
+          />
+          <span
+            className={`block w-6 h-px bg-[#F8F5EE] transition-all duration-300 ${menuOpen ? "-rotate-45 -translate-y-[7px]" : ""}`}
+          />
         </button>
       </nav>
 
-      <div className={`md:hidden transition-all duration-500 overflow-hidden ${menuOpen ? "max-h-64 opacity-100" : "max-h-0 opacity-0"} bg-[#1C2B3A] border-t border-[#F8F5EE]/10`}>
+      <div
+        className={`md:hidden transition-all duration-500 overflow-hidden ${menuOpen ? "max-h-64 opacity-100" : "max-h-0 opacity-0"} bg-[#1C2B3A] border-t border-[#F8F5EE]/10`}
+      >
         <div className="flex flex-col px-6 py-6 gap-6">
           {links.map((item) => (
             <Link

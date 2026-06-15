@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Nav from "@/components/Nav";
 import PageHeader from "@/components/PageHeader";
-import { NAVY, CREAM, MUTED } from "@/lib/brand";
+import { LOGO_WHITE, NAVY, CREAM, MUTED } from "@/lib/brand";
 
 const foundingPartners = [
   {
@@ -9,7 +9,7 @@ const foundingPartners = [
     title: "Founder & Lead Consultant",
     photo:
       "https://images.squarespace-cdn.com/content/v1/682dc9464d4d034960d4d433/67cdff53-374d-4b76-af02-8b66c134f3ca/64d3ee216e88d7304dfed8fa_Thevenot%2C+Chad.jpg",
-    bio: "Strategic education and nonprofit leader with 20+ years advancing mission-driven organizations. Previously SVP for Advancement at University of Austin (UATX) and Executive Director at Institute for Humane Studies. Expertise in strategy, philanthropy, and public engagement.",
+    bio: "Strategic education and nonprofit leader with 30+ years advancing mission-driven organizations. Previously SVP for Advancement at University of Austin (UATX) and Executive Director at Institute for Humane Studies. Expertise in strategy, philanthropy, and public engagement.",
   },
   {
     name: "Dr. Pano Kanelos",
@@ -22,18 +22,17 @@ const foundingPartners = [
 
 const team = [
   {
+    name: "Meg Court",
+    title: "Client and Partner Relationship Manager",
+    photo: "/images/meg-court-headshot.png",
+    bio: "Operations and development professional who cares deeply about helping mission-driven organizations grow with clarity and purpose. Helped build the University of Austin (UATX)'s advancement operations during the institution's founding years. Brings a collaborative, people-centered approach rooted in theater and storytelling.",
+  },
+  {
     name: "Asra Nadeem",
     title: "Advisor",
     photo:
       "https://images.squarespace-cdn.com/content/v1/682dc9464d4d034960d4d433/5b93718b-69f3-4f8f-8f1f-bb6675cb788f/Asra-profilepicture+%281%29.jpg",
     bio: "CEO of DraperU and Partner at DraperU Ventures investing in frontier tech — AI, aerospace, defense. Led investments in 57+ companies including three unicorns. Collaborates with 60+ governments on innovation and job creation.",
-  },
-  {
-    name: "Ryan Ruffaner",
-    title: "Organizational Development Specialist",
-    photo:
-      "https://images.squarespace-cdn.com/content/v1/682dc9464d4d034960d4d433/c0202264-8e70-4d56-b346-713a468acece/Headshot+2024+%281%29+%281%29.JPG",
-    bio: "10+ years optimizing organizational performance through data-driven systems and evidence-based practices. Specializes in change management, professional development, and talent strategy. Published in Quillette and FAIR.",
   },
   {
     name: "Kéyah Doering",
@@ -45,15 +44,14 @@ const team = [
   {
     name: "Will Harwood",
     title: "Strategic Advisor",
-    photo:
-      "https://images.squarespace-cdn.com/content/v1/682dc9464d4d034960d4d433/14e318bf-6ef9-44b4-bd2f-5962969c78ea/CF7BED3C-DEE4-4213-B354-6E134E20B913.png",
+    photo: null,
     bio: "15+ years in international communications and public affairs. Former Head of Communications at Lidl US, generating $500M+ in earned media. Expertise in media relations, crisis communications, and strategic storytelling.",
   },
   {
     name: "June Arunga",
     title: "Strategic Advisor",
     photo:
-      "https://images.squarespace-cdn.com/content/v1/682dc9464d4d034960d4d433/1fc11af0-4da2-47e1-879b-43fb8518869c/headshot.JPEG",
+      "https://images.squarespace-cdn.com/content/v1/682dc9464d4d034960d4d433/14e318bf-6ef9-44b4-bd2f-5962969c78ea/CF7BED3C-DEE4-4213-B354-6E134E20B913.png",
     bio: "Legal strategist and systems builder across infrastructure, technology, media, and civic sectors. Advises on landscape analysis, roadmap development, stakeholder coordination, and implementation in complex institutional contexts.",
   },
   {
@@ -65,16 +63,18 @@ const team = [
   {
     name: "Mary Miller",
     title: "Strategic Advisor",
-    photo: null,
+    photo:
+      "https://images.squarespace-cdn.com/content/v1/682dc9464d4d034960d4d433/1fc11af0-4da2-47e1-879b-43fb8518869c/headshot.JPEG",
     bio: "Principal of Consortio Advising providing philanthropy and nonprofit consulting. Raised millions for national organizations and launched donor-led philanthropic initiatives. Expertise spans public policy, criminal justice reform, and K-12 and higher education.",
   },
 ];
 
 function Initials({ name }: { name: string }) {
   const parts = name.split(" ").filter(Boolean);
-  const initials = parts.length >= 2
-    ? parts[0][0] + parts[parts.length - 1][0]
-    : parts[0][0];
+  const initials =
+    parts.length >= 2
+      ? parts[0][0] + parts[parts.length - 1][0]
+      : parts[0][0];
   return (
     <div
       className="w-full h-full flex items-center justify-center"
@@ -116,11 +116,11 @@ export default function OurPeoplePage() {
             </span>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12 lg:gap-16">
+          <div className="grid md:grid-cols-2 gap-12 lg:gap-20 max-w-4xl">
             {foundingPartners.map((person) => (
               <div key={person.name} className="group">
                 <div
-                  className="relative overflow-hidden mb-8"
+                  className="relative overflow-hidden mb-8 max-w-[240px]"
                   style={{ aspectRatio: "3/4" }}
                 >
                   <Image
@@ -128,7 +128,7 @@ export default function OurPeoplePage() {
                     alt={person.name}
                     fill
                     className="object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-700"
-                    sizes="(max-width: 768px) 100vw, 50vw"
+                    sizes="240px"
                   />
                 </div>
                 <div
@@ -147,7 +147,10 @@ export default function OurPeoplePage() {
                 >
                   {person.title}
                 </p>
-                <p className="font-light leading-relaxed text-base" style={{ color: MUTED }}>
+                <p
+                  className="font-light leading-relaxed text-base"
+                  style={{ color: MUTED }}
+                >
                   {person.bio}
                 </p>
               </div>
@@ -207,7 +210,10 @@ export default function OurPeoplePage() {
                 >
                   {person.title}
                 </p>
-                <p className="font-light leading-relaxed text-sm" style={{ color: MUTED }}>
+                <p
+                  className="font-light leading-relaxed text-sm"
+                  style={{ color: MUTED }}
+                >
                   {person.bio}
                 </p>
               </div>
@@ -222,14 +228,19 @@ export default function OurPeoplePage() {
         style={{ background: NAVY, borderTop: "1px solid rgba(248,245,238,0.1)" }}
       >
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+          <Image
+            src={LOGO_WHITE}
+            alt="The Athos Group"
+            width={120}
+            height={42}
+            className="h-7 w-auto opacity-80"
+          />
           <span
-            className="font-[family-name:var(--font-playfair)] text-sm font-semibold tracking-widest uppercase"
-            style={{ color: CREAM }}
+            className="text-xs tracking-wide"
+            style={{ color: CREAM, opacity: 0.4 }}
           >
-            The Athos Group
-          </span>
-          <span className="text-xs tracking-wide" style={{ color: CREAM, opacity: 0.4 }}>
-            &copy; {new Date().getFullYear()} The Athos Group, LLC. All rights reserved.
+            &copy; {new Date().getFullYear()} The Athos Group, LLC. All rights
+            reserved.
           </span>
         </div>
       </footer>

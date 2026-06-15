@@ -1,8 +1,14 @@
 import Image from "next/image";
 import Nav from "@/components/Nav";
-import { NAVY, CREAM } from "@/lib/brand";
+import { LOGO_BLACK, LOGO_WHITE, NAVY, CREAM } from "@/lib/brand";
 
-const clients = [
+type Client = {
+  name: string;
+  logo: string;
+  logoBg?: string;
+};
+
+const clients: Client[] = [
   {
     name: "National Center for the Apprenticeship Degree",
     logo: "https://images.squarespace-cdn.com/content/v1/682dc9464d4d034960d4d433/0d378289-f0ce-4115-a288-9ac5ad76e5d3/Untitled+design+%284%29.png",
@@ -26,33 +32,34 @@ const clients = [
   {
     name: "Heterodox Academy",
     logo: "https://images.squarespace-cdn.com/content/v1/682dc9464d4d034960d4d433/fbfbca67-e943-4156-a6a6-07d5454f5632/Heterodox_Academy_logo2.png",
+    logoBg: "#FFFFFF",
   },
 ];
 
 const testimonials = [
   {
     quote:
-      "Their strategic insight and expertise in major gifts work has been transformative. They bring a rare combination of intellectual depth and practical fundraising acumen.",
-    author: "Dr. Eric Dunker",
-    title: "Reach University",
-  },
-  {
-    quote:
-      "One of the best in the business. Their counsel has been invaluable at every stage of our growth.",
+      "One of the best in the business...Chad is probably the best development [professional] in our network, hands down.",
     author: "Siri Terjesen",
     title: "Florida Atlantic University",
   },
   {
     quote:
-      "They built us a pitch that secured over a million dollars annually for three consecutive years. Results-driven, strategic, and deeply trustworthy.",
+      "[M]y first pitch for the campaign came in today at the top ask level: $1M per year for three years, with the first payment immediate. He's also allowing us to use his name as we approach other lead donors. Chad, your advice and guidance as we built our proposal was instrumental to this. Pro level.",
     author: "John Tomasi",
     title: "Heterodox Academy",
   },
   {
     quote:
-      "They built our entire fundraising operation from the ground up and helped us secure the substantial funds we needed to pursue our mission with confidence.",
+      "...You have built an entire fundraising operation from scratch and raised a huge sum of money that only a handful of hundred-year-old universities can muster. We would not be here without you.",
     author: "Bari Weiss",
     title: "CBS News",
+  },
+  {
+    quote:
+      "Athos brings a rare combination of strategic insight and fundraising expertise that has truly elevated our major gifts and development efforts. They've helped us clarify our value proposition, refine our messaging, and identify a broader network of funders and partners. Most importantly, they've met us where we are—offering tailored guidance that makes us stand out in a competitive philanthropic landscape.",
+    author: "Dr. Eric Dunker",
+    title: "Reach University",
   },
 ];
 
@@ -93,14 +100,25 @@ export default function Home() {
             </span>
           </div>
 
-          <h1
-            className="font-[family-name:var(--font-playfair)] font-bold leading-[1.0] tracking-tight opacity-0-start animate-fade-up delay-100"
-            style={{ fontSize: "clamp(3.5rem, 9vw, 9rem)", color: NAVY }}
-          >
-            From Idea
-            <br />
-            <span className="italic">to Impact.</span>
-          </h1>
+          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-10 lg:gap-16 opacity-0-start animate-fade-up delay-100">
+            <h1
+              className="font-[family-name:var(--font-playfair)] font-bold leading-[1.0] tracking-tight shrink-0"
+              style={{ fontSize: "clamp(3.5rem, 9vw, 9rem)", color: NAVY }}
+            >
+              From Idea
+              <br />
+              <span className="italic">to Impact.</span>
+            </h1>
+
+            <Image
+              src={LOGO_BLACK}
+              alt="The Athos Group"
+              width={640}
+              height={320}
+              className="h-28 sm:h-32 lg:h-48 xl:h-56 w-auto shrink-0 self-start lg:self-end"
+              priority
+            />
+          </div>
 
           <p
             className="mt-10 max-w-xl text-lg lg:text-xl font-light leading-relaxed opacity-0-start animate-fade-up delay-200"
@@ -221,13 +239,21 @@ export default function Home() {
                 key={client.name}
                 className="flex flex-col items-center gap-4 group"
               >
-                <div className="w-full flex items-center justify-center h-24">
+                <div
+                  className="w-full flex items-center justify-center h-28 px-4 py-3 transition-opacity duration-300 group-hover:opacity-90"
+                  style={{
+                    background: client.logoBg ?? NAVY,
+                    border: client.logoBg
+                      ? "1px solid rgba(28,43,58,0.1)"
+                      : undefined,
+                  }}
+                >
                   <Image
                     src={client.logo}
                     alt={client.name}
                     width={160}
                     height={96}
-                    className="max-h-24 w-auto object-contain opacity-80 group-hover:opacity-100 transition-opacity duration-300"
+                    className="max-h-20 w-auto object-contain"
                   />
                 </div>
                 <p
@@ -379,6 +405,13 @@ export default function Home() {
         style={{ background: NAVY }}
       >
         <div className="max-w-3xl mx-auto">
+          <Image
+            src={LOGO_WHITE}
+            alt="The Athos Group"
+            width={280}
+            height={96}
+            className="h-20 sm:h-24 lg:h-28 w-auto mx-auto mb-12 opacity-90"
+          />
           <span
             className="text-xs font-medium tracking-[0.3em] uppercase"
             style={{ color: CREAM, opacity: 0.5 }}
@@ -416,12 +449,13 @@ export default function Home() {
         style={{ background: NAVY, borderTop: "1px solid rgba(248,245,238,0.1)" }}
       >
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-          <span
-            className="font-[family-name:var(--font-playfair)] text-sm font-semibold tracking-widest uppercase"
-            style={{ color: CREAM }}
-          >
-            The Athos Group
-          </span>
+          <Image
+            src={LOGO_WHITE}
+            alt="The Athos Group"
+            width={120}
+            height={42}
+            className="h-7 w-auto opacity-80"
+          />
           <span className="text-xs tracking-wide" style={{ color: CREAM, opacity: 0.4 }}>
             &copy; {new Date().getFullYear()} The Athos Group, LLC. All rights reserved.
           </span>

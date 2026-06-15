@@ -1,7 +1,8 @@
+import Image from "next/image";
 import Nav from "@/components/Nav";
 import PageHeader from "@/components/PageHeader";
 import ContactForm from "@/components/ContactForm";
-import { NAVY, CREAM, MUTED } from "@/lib/brand";
+import { LOGO_WHITE, NAVY, CREAM, MUTED } from "@/lib/brand";
 
 export default function ContactPage() {
   return (
@@ -72,12 +73,13 @@ export default function ContactPage() {
         style={{ background: NAVY, borderTop: "1px solid rgba(248,245,238,0.1)" }}
       >
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-          <span
-            className="font-[family-name:var(--font-playfair)] text-sm font-semibold tracking-widest uppercase"
-            style={{ color: CREAM }}
-          >
-            The Athos Group
-          </span>
+          <Image
+            src={LOGO_WHITE}
+            alt="The Athos Group"
+            width={120}
+            height={42}
+            className="h-7 w-auto opacity-80"
+          />
           <span className="text-xs tracking-wide" style={{ color: CREAM, opacity: 0.4 }}>
             &copy; {new Date().getFullYear()} The Athos Group, LLC. All rights reserved.
           </span>
