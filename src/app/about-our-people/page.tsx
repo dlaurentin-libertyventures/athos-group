@@ -6,7 +6,7 @@ import { LOGO_WHITE, NAVY, CREAM, MUTED } from "@/lib/brand";
 const foundingPartners = [
   {
     name: "Chad Thevenot",
-    title: "Founder & Lead Consultant",
+    title: "Founding Partner and Managing Director",
     photo:
       "https://images.squarespace-cdn.com/content/v1/682dc9464d4d034960d4d433/67cdff53-374d-4b76-af02-8b66c134f3ca/64d3ee216e88d7304dfed8fa_Thevenot%2C+Chad.jpg",
     bio: "Strategic education and nonprofit leader with 30+ years advancing mission-driven organizations. Previously SVP for Advancement at University of Austin (UATX) and Executive Director at Institute for Humane Studies. Expertise in strategy, philanthropy, and public engagement.",
@@ -22,17 +22,17 @@ const foundingPartners = [
 
 const team = [
   {
-    name: "Meg Court",
-    title: "Client and Partner Relationship Manager",
-    photo: "/images/meg-court-headshot.png",
-    bio: "Operations and development professional who cares deeply about helping mission-driven organizations grow with clarity and purpose. Helped build the University of Austin (UATX)'s advancement operations during the institution's founding years. Brings a collaborative, people-centered approach rooted in theater and storytelling.",
+    name: "June Arunga",
+    title: "Strategic Advisor",
+    photo:
+      "https://images.squarespace-cdn.com/content/v1/682dc9464d4d034960d4d433/14e318bf-6ef9-44b4-bd2f-5962969c78ea/CF7BED3C-DEE4-4213-B354-6E134E20B913.png",
+    bio: "Legal strategist and systems builder across infrastructure, technology, media, and civic sectors. Advises on landscape analysis, roadmap development, stakeholder coordination, and implementation in complex institutional contexts.",
   },
   {
-    name: "Asra Nadeem",
-    title: "Advisor",
-    photo:
-      "https://images.squarespace-cdn.com/content/v1/682dc9464d4d034960d4d433/5b93718b-69f3-4f8f-8f1f-bb6675cb788f/Asra-profilepicture+%281%29.jpg",
-    bio: "CEO of DraperU and Partner at DraperU Ventures investing in frontier tech — AI, aerospace, defense. Led investments in 57+ companies including three unicorns. Collaborates with 60+ governments on innovation and job creation.",
+    name: "Meg Court",
+    title: "Client Relationship Manager",
+    photo: "/images/meg-court-headshot.png",
+    bio: "Operations and development professional who cares deeply about helping mission-driven organizations grow with clarity and purpose. Helped build the University of Austin (UATX)'s advancement operations during the institution's founding years. Brings a collaborative, people-centered approach rooted in theater and storytelling.",
   },
   {
     name: "Kéyah Doering",
@@ -48,24 +48,24 @@ const team = [
     bio: "15+ years in international communications and public affairs. Former Head of Communications at Lidl US, generating $500M+ in earned media. Expertise in media relations, crisis communications, and strategic storytelling.",
   },
   {
-    name: "June Arunga",
-    title: "Strategic Advisor",
-    photo:
-      "https://images.squarespace-cdn.com/content/v1/682dc9464d4d034960d4d433/14e318bf-6ef9-44b4-bd2f-5962969c78ea/CF7BED3C-DEE4-4213-B354-6E134E20B913.png",
-    bio: "Legal strategist and systems builder across infrastructure, technology, media, and civic sectors. Advises on landscape analysis, roadmap development, stakeholder coordination, and implementation in complex institutional contexts.",
-  },
-  {
-    name: "Gerry O'Sullivan",
-    title: "Senior Advisor, Accreditation & Compliance",
-    photo: "/images/gerry-osullivan-headshot.png",
-    bio: "30+ years in independent higher education across faculty, provost, and consultant roles. Extensive accreditation experience including authoring reports and serving agencies. Led start-ups, mergers, and program development with deep budgeting and compliance expertise.",
-  },
-  {
     name: "Mary Miller",
     title: "Strategic Advisor",
     photo:
       "https://images.squarespace-cdn.com/content/v1/682dc9464d4d034960d4d433/1fc11af0-4da2-47e1-879b-43fb8518869c/headshot.JPEG",
     bio: "Principal of Consortio Advising providing philanthropy and nonprofit consulting. Raised millions for national organizations and launched donor-led philanthropic initiatives. Expertise spans public policy, criminal justice reform, and K-12 and higher education.",
+  },
+  {
+    name: "Asra Nadeem",
+    title: "Advisor",
+    photo:
+      "https://images.squarespace-cdn.com/content/v1/682dc9464d4d034960d4d433/5b93718b-69f3-4f8f-8f1f-bb6675cb788f/Asra-profilepicture+%281%29.jpg",
+    bio: "CEO of DraperU and Partner at DraperU Ventures investing in frontier tech — AI, aerospace, defense. Led investments in 57+ companies including three unicorns. Collaborates with 60+ governments on innovation and job creation.",
+  },
+  {
+    name: "Gerry O'Sullivan",
+    title: "Senior Advisor, Accreditation",
+    photo: "/images/gerry-osullivan-headshot.png",
+    bio: "30+ years in independent higher education across faculty, provost, and consultant roles. Extensive accreditation experience including authoring reports and serving agencies. Led start-ups, mergers, and program development with deep budgeting and compliance expertise.",
   },
 ];
 

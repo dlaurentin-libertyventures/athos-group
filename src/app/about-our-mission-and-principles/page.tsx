@@ -32,7 +32,7 @@ const principles = [
     number: "05",
     title: "Institutional heterogeneity",
     description:
-      "We believe in institutional heterogeneity — systems designed to serve the unique needs of diverse audiences. One size does not fit all, and excellence demands distinction.",
+      "We believe in institutional heterogeneity — organizations designed to serve the unique needs of diverse audiences. One size does not fit all. Excellence demands distinction.",
   },
 ];
 
@@ -47,49 +47,37 @@ export default function MissionPage() {
 
       {/* ── MISSION STATEMENT ─────────────────────────────────── */}
       <section
-        className="py-24 lg:py-36 px-6 lg:px-16"
+        className="py-20 lg:py-28 px-6 lg:px-16"
         style={{ background: CREAM }}
       >
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
-          <div>
-            <div className="flex items-center gap-4 mb-8">
-              <span className="block w-10 h-px" style={{ background: NAVY }} />
-              <span
-                className="text-xs font-medium tracking-[0.3em] uppercase"
-                style={{ color: NAVY, opacity: 0.5 }}
-              >
-                Our Mission
-              </span>
-            </div>
-            <h2
-              className="font-[family-name:var(--font-playfair)] font-bold leading-tight"
-              style={{ fontSize: "clamp(2rem, 3.5vw, 3.25rem)", color: NAVY }}
+        <div className="max-w-4xl mx-auto">
+          <div className="flex items-center gap-4 mb-8">
+            <span className="block w-10 h-px" style={{ background: NAVY }} />
+            <span
+              className="text-xs font-medium tracking-[0.3em] uppercase"
+              style={{ color: NAVY, opacity: 0.5 }}
             >
-              Building what matters,
-              <br />
-              <span className="italic">for the long run.</span>
-            </h2>
+              Our Mission
+            </span>
           </div>
-          <div>
-            <p
-              className="font-[family-name:var(--font-playfair)] text-xl lg:text-2xl font-medium leading-relaxed italic"
-              style={{ color: NAVY }}
-            >
-              &ldquo;Our world-renowned team of founders, builders, and
-              innovators empower bold new educational endeavors and strengthen
-              the distinctive, mission-driven institutions that are vital to
-              our future.&rdquo;
-            </p>
-            <div className="mt-8 pt-8" style={{ borderTop: "1px solid rgba(28,43,58,0.1)" }}>
-              <p className="font-light leading-relaxed text-lg" style={{ color: MUTED }}>
-                The Athos Group exists to serve those who believe that ideas have
-                consequences — and that the right institutions, built well, can
-                change the course of history. We bring strategy, relationships,
-                and execution to organizations that are building something that
-                will last.
-              </p>
-            </div>
-          </div>
+          <h2
+            className="font-[family-name:var(--font-playfair)] font-bold leading-tight mb-10"
+            style={{ fontSize: "clamp(2rem, 3.5vw, 3.25rem)", color: NAVY }}
+          >
+            Building what matters,
+            <br />
+            <span className="italic">for the long run.</span>
+          </h2>
+          <p
+            className="font-light leading-relaxed text-xl lg:text-2xl"
+            style={{ color: MUTED }}
+          >
+            The Athos Group exists to serve those who believe that ideas have
+            consequences — and that the right institutions, built well, can
+            change the course of history. We bring strategy, relationships,
+            and execution to organizations that are building something that
+            will last.
+          </p>
         </div>
       </section>
 

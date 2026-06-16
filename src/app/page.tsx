@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import Nav from "@/components/Nav";
 import { LOGO_BLACK, LOGO_WHITE, NAVY, CREAM } from "@/lib/brand";
 
@@ -66,11 +67,11 @@ const testimonials = [
 const team = [
   {
     name: "Chad Thevenot",
-    title: "Founding Partner",
+    title: "Founding Partner and Managing Director",
     photo:
       "https://images.squarespace-cdn.com/content/v1/682dc9464d4d034960d4d433/67cdff53-374d-4b76-af02-8b66c134f3ca/64d3ee216e88d7304dfed8fa_Thevenot%2C+Chad.jpg",
     description:
-      "A seasoned strategist with deep expertise in institutional development, major gifts, and the conservative and classical liberal philanthropic landscape.",
+      "Strategic education and nonprofit leader with 30+ years advancing mission-driven organizations.",
   },
   {
     name: "Pano Kanelos",
@@ -78,7 +79,7 @@ const team = [
     photo:
       "https://images.squarespace-cdn.com/content/v1/682dc9464d4d034960d4d433/6adc68ef-2d5c-4edd-a42e-932e57d360ca/64d3ab91752dffd7a5b2537f_Kanelos%2C+Pano+1.jpg",
     description:
-      "A scholar and institution-builder whose work spans higher education, civil society, and the renewal of America's intellectual and cultural foundations.",
+      "Nationally recognized academic leader advising on institutional growth and transformation.",
   },
 ];
 
@@ -96,7 +97,7 @@ export default function Home() {
               className="text-xs font-medium tracking-[0.3em] uppercase"
               style={{ color: NAVY, opacity: 0.5 }}
             >
-              Strategic Advisory
+              Strategic Advisory &amp; Execution
             </span>
           </div>
 
@@ -183,27 +184,32 @@ export default function Home() {
               className="font-[family-name:var(--font-playfair)] font-bold mt-5 leading-tight"
               style={{ fontSize: "clamp(2.5rem, 4vw, 4rem)", color: NAVY }}
             >
-              Strategy that
-              <br />
-              <span className="italic">endures.</span>
+              Builders and Partners.
             </h2>
           </div>
           <div className="space-y-6 font-light leading-relaxed text-lg" style={{ color: "#5A6A7A" }}>
             <p>
-              The Athos Group is a strategic advisory firm dedicated to building
-              and renewing the institutions that sustain a free and flourishing
-              society.
+              Traditional advisory firms deliver expensive reports and slow-moving
+              strategies. At Athos, we do the opposite. Our Fractional Social
+              Ventures model combines rapid strategic visioning with a
+              high-performance executive strike team to help launch, renew, and
+              scale bold ventures in record time. We help emerging institutions
+              go from 0 to 1 and high-potential institutions go from 1 to 10.
             </p>
             <p>
-              We partner with mission-driven organizations — think tanks,
-              universities, civic institutions, and foundations — to develop
-              bold strategies, cultivate major donors, and translate ideas into
-              lasting institutional impact.
+              We work alongside founders, funders, and leaders to develop a
+              clear, differentiated vision and strategic roadmap within weeks,
+              then mobilize a lean, senior-level team to build organizational
+              capacity, attract philanthropic capital, and secure the early wins
+              that create momentum. Our team consists of the builders, operators,
+              and entrepreneurs who have helped create and lead some of the
+              country&apos;s most distinctive and impactful social ventures.
             </p>
             <p>
-              Our work sits at the intersection of ideas and action, where
-              vision becomes reality and organizations grow into the movements
-              they were always meant to become.
+              We believe lasting impact comes from courageous vision,
+              entrepreneurial execution, authentic community-building,
+              intellectual pluralism, institutional independence, and a relentless
+              focus on results.
             </p>
           </div>
         </div>
@@ -230,7 +236,7 @@ export default function Home() {
             className="font-[family-name:var(--font-playfair)] font-bold mb-16 leading-tight max-w-lg"
             style={{ fontSize: "clamp(2rem, 3.5vw, 3rem)", color: NAVY }}
           >
-            Trusted by institutions that shape the future.
+            Trusted by Institutions shaping the future.
           </h2>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8 lg:gap-6">
@@ -433,13 +439,13 @@ export default function Home() {
             We work with a select group of organizations committed to ideas that
             matter. If that sounds like you, we&apos;d like to hear from you.
           </p>
-          <a
-            href="mailto:info@athosed.com"
+          <Link
+            href="/contact"
             className="inline-flex items-center gap-3 px-10 py-5 text-sm font-medium tracking-widest uppercase transition-all duration-300 hover:opacity-80"
             style={{ border: `1px solid ${CREAM}`, color: CREAM }}
           >
             Contact Us
-          </a>
+          </Link>
         </div>
       </section>
 
