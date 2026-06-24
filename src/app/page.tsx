@@ -204,7 +204,7 @@ export default function Home() {
             className="font-[family-name:var(--font-playfair)] font-bold mb-16 leading-tight max-w-lg"
             style={{ fontSize: "clamp(2rem, 3.5vw, 3rem)", color: NAVY }}
           >
-            Trusted by Institutions shaping the future.
+            Trusted by institutions shaping the future.
           </h2>
 
           <ClientsCarousel clients={clients} />
