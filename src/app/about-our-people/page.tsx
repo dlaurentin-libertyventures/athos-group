@@ -48,6 +48,12 @@ const team = [
     bio: "15+ years in international communications and public affairs. Former Head of Communications at Lidl US, generating $500M+ in earned media. Expertise in media relations, crisis communications, and strategic storytelling.",
   },
   {
+    name: "Lindsey Lawrence",
+    title: "Director of Community Strategy",
+    photo: "/images/lindsey-lawrence-headshot.jpg",
+    bio: "Builds and scales ventures that advance a free and flourishing society. Expanded the national leadership network at Teneo, served as executive director of the Arena Hall Foundation, and co-founded Arena Hall, Inc., a forthcoming private club for Austin's founders, investors, and builders.",
+  },
+  {
     name: "Mary Miller",
     title: "Strategic Advisor",
     photo:

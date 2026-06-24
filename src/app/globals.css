@@ -72,3 +72,23 @@ body {
 .principle-row:hover {
   background: var(--cream);
 }
+
+.clients-carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+.clients-carousel-slide {
+  flex: 0 0 100%;
+}
+
+@media (min-width: 640px) {
+  .clients-carousel-slide {
+    flex-basis: calc(50% - 1rem);
+  }
+}
+
+@media (min-width: 1024px) {
+  .clients-carousel-slide {
+    flex-basis: calc(20% - 1rem);
+  }
+}

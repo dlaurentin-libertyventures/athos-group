@@ -1,41 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import Nav from "@/components/Nav";
+import ClientsCarousel from "@/components/ClientsCarousel";
+import { clients } from "@/lib/clients";
 import { LOGO_BLACK, LOGO_WHITE, NAVY, CREAM } from "@/lib/brand";
-
-type Client = {
-  name: string;
-  logo: string;
-  logoBg?: string;
-};
-
-const clients: Client[] = [
-  {
-    name: "National Center for the Apprenticeship Degree",
-    logo: "https://images.squarespace-cdn.com/content/v1/682dc9464d4d034960d4d433/0d378289-f0ce-4115-a288-9ac5ad76e5d3/Untitled+design+%284%29.png",
-  },
-  {
-    name: "Reach University",
-    logo: "https://images.squarespace-cdn.com/content/v1/682dc9464d4d034960d4d433/37ae3864-a743-4474-90eb-2da26bca7251/Untitled+design%283%29.png",
-  },
-  {
-    name: "Institute for Humane Studies",
-    logo: "https://images.squarespace-cdn.com/content/v1/682dc9464d4d034960d4d433/f6fbbe93-6a7e-4b2f-944c-ecada527e2fe/Untitled+%283+x+2+in%29+%281%29.png",
-  },
-  {
-    name: "Institute of World Politics",
-    logo: "https://images.squarespace-cdn.com/content/v1/682dc9464d4d034960d4d433/dcf7fbe9-4038-4dc0-b3f2-8c28dd659b57/Untitled+design%285%29.png",
-  },
-  {
-    name: "Emergent Order Foundation",
-    logo: "https://images.squarespace-cdn.com/content/v1/682dc9464d4d034960d4d433/a32c953e-3841-4b68-8c34-b0f9c7ed9c59/EO+Logo+Cropped.png",
-  },
-  {
-    name: "Heterodox Academy",
-    logo: "https://images.squarespace-cdn.com/content/v1/682dc9464d4d034960d4d433/fbfbca67-e943-4156-a6a6-07d5454f5632/Heterodox_Academy_logo2.png",
-    logoBg: "#FFFFFF",
-  },
-];
 
 const testimonials = [
   {
@@ -239,38 +207,7 @@ export default function Home() {
             Trusted by Institutions shaping the future.
           </h2>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8 lg:gap-6">
-            {clients.map((client) => (
-              <div
-                key={client.name}
-                className="flex flex-col items-center gap-4 group"
-              >
-                <div
-                  className="w-full flex items-center justify-center h-28 px-4 py-3 transition-opacity duration-300 group-hover:opacity-90"
-                  style={{
-                    background: client.logoBg ?? NAVY,
-                    border: client.logoBg
-                      ? "1px solid rgba(28,43,58,0.1)"
-                      : undefined,
-                  }}
-                >
-                  <Image
-                    src={client.logo}
-                    alt={client.name}
-                    width={160}
-                    height={96}
-                    className="max-h-20 w-auto object-contain"
-                  />
-                </div>
-                <p
-                  className="text-center text-xs leading-snug"
-                  style={{ color: NAVY, opacity: 0.6 }}
-                >
-                  {client.name}
-                </p>
-              </div>
-            ))}
-          </div>
+          <ClientsCarousel clients={clients} />
         </div>
       </section>
 
