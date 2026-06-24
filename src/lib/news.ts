@@ -43,6 +43,6 @@ export const newsItems: NewsItem[] = [
     imageAlt: "The Athos Group logo",
     announcementUrl:
       "https://www.linkedin.com/posts/libertyventuresnetwork_we-are-proud-to-highlight-liberty-ventures-activity-7395207655629234176-qo_G",
-    announcementLabel: "See Full Announcement Here",
+    announcementLabel: "See Full Announcement",
   },
 ];
