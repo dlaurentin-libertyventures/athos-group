@@ -71,7 +71,7 @@ export default function Home() {
         />
 
         {/* Solid mountain mark — floating mid-right */}
-        <Image
+        {/* <Image
           src={MOUNTAIN_ICON}
           alt=""
           width={2478}
@@ -79,7 +79,7 @@ export default function Home() {
           priority
           aria-hidden
           className="pointer-events-none absolute right-[8%] top-1/2 z-1 h-[clamp(120px,18vw,220px)] w-auto max-w-none -translate-y-1/2"
-        />
+        /> */}
 
         <div className="relative z-10 mx-auto w-full max-w-7xl py-24 lg:py-32">
           <div className="mb-10 flex items-center gap-4 opacity-0-start animate-fade-up">
