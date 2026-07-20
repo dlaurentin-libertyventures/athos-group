@@ -78,7 +78,7 @@ body {
 }
 
 .clients-carousel-slide {
-  flex: 0 0 100%;
+  flex: 0 0 calc(33.333% - 0.85rem);
 }
 
 @media (min-width: 640px) {

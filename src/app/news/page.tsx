@@ -9,10 +9,6 @@ export const metadata: Metadata = {
   title: "News & Announcements | The Athos Group",
   description:
     "Updates on The Athos Group and partner initiatives for founders, funders, and institutions.",
-  robots: {
-    index: false,
-    follow: false,
-  },
 };
 
 export default function NewsPage() {

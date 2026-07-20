@@ -3,7 +3,7 @@ import Link from "next/link";
 import Nav from "@/components/Nav";
 import ClientsCarousel from "@/components/ClientsCarousel";
 import { clients } from "@/lib/clients";
-import { LOGO_BLACK, LOGO_WHITE, NAVY, CREAM } from "@/lib/brand";
+import { LOGO_WHITE, MOUNTAIN_ICON, MOUNTAIN_WATERMARK, NAVY, CREAM } from "@/lib/brand";
 
 const testimonials = [
   {
@@ -57,36 +57,50 @@ export default function Home() {
       <Nav />
 
       {/* ── HERO ──────────────────────────────────────────────── */}
-      <section className="relative min-h-screen flex items-center px-6 lg:px-12 pt-16 overflow-hidden">
-        <div className="max-w-7xl mx-auto w-full py-24 lg:py-32">
-          <div className="flex items-center gap-4 mb-10 opacity-0-start animate-fade-up">
-            <span className="block w-10 h-px" style={{ background: NAVY }} />
+      <section className="relative flex min-h-screen items-center overflow-hidden px-6 pt-16 lg:px-12">
+        {/* Line-art mountain — bottom-right corner, large */}
+        <Image
+          src={MOUNTAIN_WATERMARK}
+          alt=""
+          width={3258}
+          height={1291}
+          unoptimized
+          priority
+          aria-hidden
+          className="pointer-events-none absolute right-0 bottom-0 z-0 w-[clamp(600px,75vw,1600px)] max-w-none object-contain object-bottom-right opacity-100"
+        />
+
+        {/* Solid mountain mark — floating mid-right */}
+        <Image
+          src={MOUNTAIN_ICON}
+          alt=""
+          width={2478}
+          height={1326}
+          priority
+          aria-hidden
+          className="pointer-events-none absolute right-[8%] top-1/2 z-1 h-[clamp(120px,18vw,220px)] w-auto max-w-none -translate-y-1/2"
+        />
+
+        <div className="relative z-10 mx-auto w-full max-w-7xl py-24 lg:py-32">
+          <div className="mb-10 flex items-center gap-4 opacity-0-start animate-fade-up">
+            <span className="block h-px w-10" style={{ background: NAVY }} />
             <span
-              className="text-xs font-medium tracking-[0.3em] uppercase"
+              className="text-xs font-medium uppercase tracking-[0.3em]"
               style={{ color: NAVY, opacity: 0.5 }}
             >
               Strategic Advisory &amp; Execution
             </span>
           </div>
 
-          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-10 lg:gap-16 opacity-0-start animate-fade-up delay-100">
+          <div className="opacity-0-start animate-fade-up delay-100">
             <h1
-              className="font-[family-name:var(--font-playfair)] font-bold leading-[1.0] tracking-tight shrink-0"
+              className="relative max-w-3xl font-[family-name:var(--font-playfair)] font-bold leading-none tracking-tight"
               style={{ fontSize: "clamp(3.5rem, 9vw, 9rem)", color: NAVY }}
             >
               From Idea
               <br />
               <span className="italic">to Impact.</span>
             </h1>
-
-            <Image
-              src={LOGO_BLACK}
-              alt="The Athos Group"
-              width={640}
-              height={320}
-              className="h-28 sm:h-32 lg:h-48 xl:h-56 w-auto shrink-0 self-start lg:self-end"
-              priority
-            />
           </div>
 
           <p

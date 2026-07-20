@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -s -H \"Accept: image/webp,image/*,*/*\" -o /tmp/opt1_webp2.img \"http://localhost:3000/_next/image?url=%2Fimages%2FOption%201.png&w=3840&q=75\")",
+      "Bash(sips -g pixelWidth -g pixelHeight /tmp/opt1_webp2.img)",
+      "Bash(curl -s -H \"Accept: image/png\" -o /tmp/opt1_png2.img \"http://localhost:3000/_next/image?url=%2Fimages%2FOption%201.png&w=3840&q=75\")",
+      "Bash(sips -g pixelWidth -g pixelHeight /tmp/opt1_png2.img)",
+      "Bash(curl -s -H \"Accept: image/webp,image/*,*/*\" -o /tmp/opt1_1920.img \"http://localhost:3000/_next/image?url=%2Fimages%2FOption%201.png&w=1920&q=75\")",
+      "Bash(sips -g pixelWidth -g pixelHeight /tmp/opt1_1920.img)",
+      "Bash(curl -s -H \"Accept: image/webp,image/*,*/*\" -o /tmp/opt1_3258.img \"http://localhost:3000/_next/image?url=%2Fimages%2FOption%201.png&w=3258&q=75\")",
+      "Bash(sips -g pixelWidth -g pixelHeight /tmp/opt1_3258.img)",
+      "Bash(curl -s -H \"Accept: image/webp,image/*,*/*\" -o /tmp/opt1_3000.img \"http://localhost:3000/_next/image?url=%2Fimages%2FOption%201.png&w=3000&q=75\")",
+      "Bash(npx eslint *)",
+      "Bash(python3 -c ' *)",
+      "Bash(curl -s -H \"Accept: image/webp,image/*,*/*\" -o /tmp/icon_3840.img \"http://localhost:3000/_next/image?url=%2Fimages%2Fathos-icon-final.png&w=3840&q=75\")",
+      "Bash(sips -g pixelWidth -g pixelHeight /tmp/icon_3840.img)",
+      "Bash(curl -s -H \"Accept: image/webp,image/*,*/*\" -o /tmp/icon_2048.img \"http://localhost:3000/_next/image?url=%2Fimages%2Fathos-icon-final.png&w=2048&q=75\")",
+      "Bash(sips -g pixelWidth -g pixelHeight /tmp/icon_2048.img)"
+    ]
+  }
+}

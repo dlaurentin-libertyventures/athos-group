@@ -34,8 +34,40 @@ export default function ClientsCarousel({ clients }: ClientsCarouselProps) {
     setCanScrollNext(maxScroll > 8 && track.scrollLeft < maxScroll - 8);
   }, []);
 
-  const scrollBySlides = useCallback(
-    (direction: "prev" | "next", slideCount = 1) => {
+  const scrollByPage = useCallback(
+    (direction: "prev" | "next") => {
+      const track = trackRef.current;
+      if (!track) return;
+
+      pauseUntilRef.current = Date.now() + AUTO_INTERVAL_MS;
+
+      const maxScroll = track.scrollWidth - track.clientWidth;
+      const pageWidth = track.clientWidth;
+      const nextLeft =
+        direction === "next"
+          ? track.scrollLeft + pageWidth
+          : track.scrollLeft - pageWidth;
+
+      if (direction === "next" && nextLeft >= maxScroll - 8) {
+        track.scrollTo({ left: 0, behavior: "smooth" });
+        return;
+      }
+
+      if (direction === "prev" && nextLeft <= 8) {
+        track.scrollTo({ left: maxScroll, behavior: "smooth" });
+        return;
+      }
+
+      track.scrollBy({
+        left: direction === "next" ? pageWidth : -pageWidth,
+        behavior: "smooth",
+      });
+    },
+    [],
+  );
+
+  const scrollByOneSlide = useCallback(
+    (direction: "prev" | "next") => {
       const track = trackRef.current;
       if (!track) return;
 
@@ -45,7 +77,7 @@ export default function ClientsCarousel({ clients }: ClientsCarouselProps) {
       pauseUntilRef.current = Date.now() + AUTO_INTERVAL_MS;
 
       const maxScroll = track.scrollWidth - track.clientWidth;
-      const delta = slideWidth * slideCount * (direction === "next" ? 1 : -1);
+      const delta = slideWidth * (direction === "next" ? 1 : -1);
       const nextLeft = track.scrollLeft + delta;
 
       if (direction === "next" && nextLeft >= maxScroll - 8) {
@@ -82,11 +114,11 @@ export default function ClientsCarousel({ clients }: ClientsCarouselProps) {
 
     const timer = window.setInterval(() => {
       if (Date.now() < pauseUntilRef.current) return;
-      scrollBySlides("next");
+      scrollByOneSlide("next");
     }, AUTO_INTERVAL_MS);
 
     return () => window.clearInterval(timer);
-  }, [clients.length, isPaused, prefersReducedMotion, scrollBySlides]);
+  }, [clients.length, isPaused, prefersReducedMotion, scrollByOneSlide]);
 
   return (
     <div
@@ -114,16 +146,16 @@ export default function ClientsCarousel({ clients }: ClientsCarouselProps) {
         {clients.map((client, index) => (
           <article
             key={`${client.name}-${client.logo}-${index}`}
-            className="clients-carousel-slide flex shrink-0 snap-start flex-col items-center justify-center gap-5"
+            className="clients-carousel-slide flex shrink-0 snap-start flex-col items-center justify-center gap-4"
           >
-            <div className="flex h-32 w-full items-center justify-center sm:h-36 lg:h-40">
+            <div className="flex h-36 w-full items-center justify-center sm:h-40 lg:h-44">
               <Image
                 src={client.logo}
                 alt={client.name}
                 width={480}
                 height={240}
-                className="max-h-28 w-auto object-contain sm:max-h-32 lg:max-h-36"
-                sizes="(max-width: 640px) 80vw, (max-width: 1024px) 40vw, 20vw"
+                className="max-h-32 w-auto object-contain sm:max-h-36 lg:max-h-40"
+                sizes="(max-width: 640px) 30vw, (max-width: 1024px) 40vw, 20vw"
               />
             </div>
             <p
@@ -139,7 +171,7 @@ export default function ClientsCarousel({ clients }: ClientsCarouselProps) {
       <div className="mt-10 flex items-center justify-center gap-4">
         <button
           type="button"
-          onClick={() => scrollBySlides("prev", 2)}
+          onClick={() => scrollByPage("prev")}
           disabled={!canScrollPrev}
           aria-label="Previous partners"
           className="inline-flex h-11 w-11 items-center justify-center border transition-opacity duration-300 disabled:opacity-25"
@@ -157,7 +189,7 @@ export default function ClientsCarousel({ clients }: ClientsCarouselProps) {
         </button>
         <button
           type="button"
-          onClick={() => scrollBySlides("next", 2)}
+          onClick={() => scrollByPage("next")}
           disabled={!canScrollNext}
           aria-label="Next partners"
           className="inline-flex h-11 w-11 items-center justify-center border transition-opacity duration-300 disabled:opacity-25"
@@ -181,5 +213,5 @@ export default function ClientsCarousel({ clients }: ClientsCarouselProps) {
 function getVisibleCount(containerWidth: number) {
   if (containerWidth >= 1024) return 5;
   if (containerWidth >= 640) return 2;
-  return 1;
+  return 3;
 }

@@ -4,5 +4,8 @@ export const MUTED = "#5A6A7A";
 
 export const LOGO_WHITE = "/images/athos-logo-white.png";
 export const LOGO_BLACK = "/images/athos-logo-black.png";
+export const MOUNTAIN_ICON = "/images/athos-icon-final.png";
+export const MOUNTAIN_ICON_FULL = "/images/athos-icon.png";
+export const MOUNTAIN_WATERMARK = "/images/Option 1.png";
 export const FAVICON_BLACK = "/images/favicon-black.png";
 export const FAVICON_WHITE = "/images/favicon-white.png";
