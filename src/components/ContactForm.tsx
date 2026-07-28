@@ -7,18 +7,52 @@ type Status = "idle" | "sending" | "sent" | "error";
 
 export default function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
-  const [form, setForm] = useState({ name: "", email: "", organization: "", message: "" });
+  const [errorMessage, setErrorMessage] = useState("");
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    organization: "",
+    message: "",
+  });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("sending");
-    await new Promise((r) => setTimeout(r, 800));
-    // Wire up to an email service (e.g. Resend, Formspree) here.
-    setStatus("sent");
+    setErrorMessage("");
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+
+      const data = (await response.json().catch(() => ({}))) as {
+        error?: string;
+      };
+
+      if (!response.ok) {
+        setErrorMessage(
+          data.error || "Something went wrong. Please try again.",
+        );
+        setStatus("error");
+        return;
+      }
+
+      setStatus("sent");
+      setForm({ name: "", email: "", organization: "", message: "" });
+    } catch {
+      setErrorMessage(
+        "Unable to reach the server. Please email keyah@athosed.com directly.",
+      );
+      setStatus("error");
+    }
   };
 
   if (status === "sent") {
@@ -38,13 +72,17 @@ export default function ContactForm() {
     );
   }
 
-  const inputClass = "w-full px-0 py-4 bg-transparent text-sm font-light outline-none border-b transition-colors duration-300 focus:border-opacity-100 placeholder-shown:border-opacity-30";
+  const inputClass =
+    "w-full px-0 py-4 bg-transparent text-sm font-light outline-none border-b transition-colors duration-300 focus:border-opacity-100 placeholder-shown:border-opacity-30";
 
   return (
     <form onSubmit={handleSubmit} className="flex flex-col gap-8">
       <div className="grid sm:grid-cols-2 gap-8">
         <div>
-          <label className="text-xs font-medium tracking-widest uppercase block mb-2" style={{ color: NAVY, opacity: 0.45 }}>
+          <label
+            className="text-xs font-medium tracking-widest uppercase block mb-2"
+            style={{ color: NAVY, opacity: 0.45 }}
+          >
             Full Name *
           </label>
           <input
@@ -63,7 +101,10 @@ export default function ContactForm() {
           />
         </div>
         <div>
-          <label className="text-xs font-medium tracking-widest uppercase block mb-2" style={{ color: NAVY, opacity: 0.45 }}>
+          <label
+            className="text-xs font-medium tracking-widest uppercase block mb-2"
+            style={{ color: NAVY, opacity: 0.45 }}
+          >
             Email *
           </label>
           <input
@@ -85,7 +126,10 @@ export default function ContactForm() {
       </div>
 
       <div>
-        <label className="text-xs font-medium tracking-widest uppercase block mb-2" style={{ color: NAVY, opacity: 0.45 }}>
+        <label
+          className="text-xs font-medium tracking-widest uppercase block mb-2"
+          style={{ color: NAVY, opacity: 0.45 }}
+        >
           Organization
         </label>
         <input
@@ -104,7 +148,10 @@ export default function ContactForm() {
       </div>
 
       <div>
-        <label className="text-xs font-medium tracking-widest uppercase block mb-2" style={{ color: NAVY, opacity: 0.45 }}>
+        <label
+          className="text-xs font-medium tracking-widest uppercase block mb-2"
+          style={{ color: NAVY, opacity: 0.45 }}
+        >
           Message *
         </label>
         <textarea
@@ -123,6 +170,12 @@ export default function ContactForm() {
           }}
         />
       </div>
+
+      {status === "error" && errorMessage && (
+        <p className="text-sm font-light" style={{ color: "#8B3A3A" }}>
+          {errorMessage}
+        </p>
+      )}
 
       <div className="pt-2">
         <button
