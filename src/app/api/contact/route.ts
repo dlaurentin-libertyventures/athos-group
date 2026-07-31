@@ -67,9 +67,29 @@ export async function POST(request: Request) {
 
     if (!upstream.ok) {
       const detail = await upstream.text().catch(() => "");
-      console.error("n8n webhook failed", upstream.status, detail);
+      console.error("n8n webhook failed", {
+        status: upstream.status,
+        urlHost: (() => {
+          try {
+            return new URL(webhookUrl).host;
+          } catch {
+            return "invalid-url";
+          }
+        })(),
+        urlPath: (() => {
+          try {
+            return new URL(webhookUrl).pathname;
+          } catch {
+            return "invalid-url";
+          }
+        })(),
+        detail: detail.slice(0, 500),
+      });
       return NextResponse.json(
-        { error: "Unable to send your message right now." },
+        {
+          error: "Unable to send your message right now.",
+          upstreamStatus: upstream.status,
+        },
         { status: 502 },
       );
     }
@@ -78,7 +98,10 @@ export async function POST(request: Request) {
   } catch (error) {
     console.error("n8n webhook request error", error);
     return NextResponse.json(
-      { error: "Unable to send your message right now." },
+      {
+        error: "Unable to send your message right now.",
+        upstreamStatus: 0,
+      },
       { status: 502 },
     );
   }
