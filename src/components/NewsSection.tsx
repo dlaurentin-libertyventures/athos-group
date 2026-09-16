@@ -1,13 +1,33 @@
 import Image from "next/image";
 import Link from "next/link";
-import { newsItems } from "@/lib/news";
+import { getDocuments } from "outstatic/server";
 import { CREAM, MUTED, NAVY } from "@/lib/brand";
 
 type NewsSectionProps = {
   hidden?: boolean;
 };
 
-export default function NewsSection({ hidden = false }: NewsSectionProps) {
+type NewsDoc = {
+  slug: string;
+  title: string;
+  summary: string;
+  image: string;
+  imageAlt: string;
+  announcementUrl: string;
+  announcementLabel?: string;
+};
+
+export default async function NewsSection({ hidden = false }: NewsSectionProps) {
+  const newsItems = getDocuments("news", [
+    "slug",
+    "title",
+    "summary",
+    "image",
+    "imageAlt",
+    "announcementUrl",
+    "announcementLabel",
+  ]) as NewsDoc[];
+
   return (
     <section
       id="news"
@@ -29,7 +49,7 @@ export default function NewsSection({ hidden = false }: NewsSectionProps) {
         <div className="grid gap-12 lg:grid-cols-3 lg:gap-10">
           {newsItems.map((item) => (
             <article
-              key={item.id}
+              key={item.slug}
               className="flex flex-col border"
               style={{ borderColor: "rgba(28,43,58,0.1)", background: "#fff" }}
             >
