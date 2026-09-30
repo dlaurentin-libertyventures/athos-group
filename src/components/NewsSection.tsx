@@ -1,32 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
-import { getDocuments } from "outstatic/server";
+import { getCollection } from "@/lib/cms";
 import { CREAM, MUTED, NAVY } from "@/lib/brand";
 
 type NewsSectionProps = {
   hidden?: boolean;
+  eyebrow: string;
 };
 
-type NewsDoc = {
-  slug: string;
-  title: string;
-  summary: string;
-  image: string;
-  imageAlt: string;
-  announcementUrl: string;
-  announcementLabel?: string;
-};
-
-export default async function NewsSection({ hidden = false }: NewsSectionProps) {
-  const newsItems = getDocuments("news", [
-    "slug",
-    "title",
-    "summary",
-    "image",
-    "imageAlt",
-    "announcementUrl",
-    "announcementLabel",
-  ]) as NewsDoc[];
+export default function NewsSection({ hidden = false, eyebrow }: NewsSectionProps) {
+  const newsItems = getCollection("news");
 
   return (
     <section
@@ -42,7 +25,7 @@ export default async function NewsSection({ hidden = false }: NewsSectionProps) 
             className="text-xs font-medium uppercase tracking-[0.3em]"
             style={{ color: NAVY, opacity: 0.5 }}
           >
-            News &amp; Announcements
+            {eyebrow}
           </span>
         </div>
 

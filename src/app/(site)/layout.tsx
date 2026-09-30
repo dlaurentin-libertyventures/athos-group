@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
+import { getPage } from "@/lib/cms";
 
 const playfair = Playfair_Display({
   variable: "--font-playfair",
@@ -16,30 +17,32 @@ const inter = Inter({
 });
 
 
-export const metadata: Metadata = {
-  title: "The Athos Group — From Idea to Impact",
-  description:
-    "Building and renewing the institutions that sustain a free and flourishing society.",
-  icons: {
-    icon: [
-      {
-        url: "/images/favicon-black.png",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: "/images/favicon-white.png",
-        media: "(prefers-color-scheme: dark)",
-      },
-    ],
-    apple: "/images/favicon-white.png",
-  },
-  openGraph: {
-    title: "The Athos Group",
-    description:
-      "Building and renewing the institutions that sustain a free and flourishing society.",
-    type: "website",
-  },
-};
+export function generateMetadata(): Metadata {
+  const site = getPage("site");
+
+  return {
+    title: site.seoTitle,
+    description: site.seoDescription,
+    icons: {
+      icon: [
+        {
+          url: "/images/favicon-black.png",
+          media: "(prefers-color-scheme: light)",
+        },
+        {
+          url: "/images/favicon-white.png",
+          media: "(prefers-color-scheme: dark)",
+        },
+      ],
+      apple: "/images/favicon-white.png",
+    },
+    openGraph: {
+      title: site.siteName,
+      description: site.seoDescription,
+      type: "website",
+    },
+  };
+}
 
 export default function RootLayout({
   children,

@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import type { Client } from "@/lib/clients";
+import type { Client } from "@/lib/cms";
 import { NAVY } from "@/lib/brand";
 
 const AUTO_INTERVAL_MS = 4500;
@@ -143,15 +143,15 @@ export default function ClientsCarousel({ clients }: ClientsCarouselProps) {
         aria-label="Partner and client logos"
         aria-roledescription="carousel"
       >
-        {clients.map((client, index) => (
+        {clients.map((client) => (
           <article
-            key={`${client.name}-${client.logo}-${index}`}
+            key={client.slug}
             className="clients-carousel-slide flex shrink-0 snap-start flex-col items-center justify-center gap-4"
           >
             <div className="flex h-36 w-full items-center justify-center sm:h-40 lg:h-44">
               <Image
                 src={client.logo}
-                alt={client.name}
+                alt={client.title}
                 width={480}
                 height={240}
                 className="max-h-32 w-auto object-contain sm:max-h-36 lg:max-h-40"
@@ -162,7 +162,7 @@ export default function ClientsCarousel({ clients }: ClientsCarouselProps) {
               className="max-w-[220px] text-center text-xs leading-snug"
               style={{ color: NAVY, opacity: 0.65 }}
             >
-              {client.name}
+              {client.title}
             </p>
           </article>
         ))}

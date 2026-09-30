@@ -2,56 +2,17 @@ import Image from "next/image";
 import Link from "next/link";
 import Nav from "@/components/Nav";
 import ClientsCarousel from "@/components/ClientsCarousel";
-import { clients } from "@/lib/clients";
-import { LOGO_WHITE, MOUNTAIN_ICON, MOUNTAIN_WATERMARK, NAVY, CREAM } from "@/lib/brand";
-
-const testimonials = [
-  {
-    quote:
-      "One of the best in the business...Chad is probably the best development [professional] in our network, hands down.",
-    author: "Siri Terjesen",
-    title: "Florida Atlantic University",
-  },
-  {
-    quote:
-      "[M]y first pitch for the campaign came in today at the top ask level: $1M per year for three years, with the first payment immediate. He's also allowing us to use his name as we approach other lead donors. Chad, your advice and guidance as we built our proposal was instrumental to this. Pro level.",
-    author: "John Tomasi",
-    title: "Heterodox Academy",
-  },
-  {
-    quote:
-      "...You have built an entire fundraising operation from scratch and raised a huge sum of money that only a handful of hundred-year-old universities can muster. We would not be here without you.",
-    author: "Bari Weiss",
-    title: "CBS News",
-  },
-  {
-    quote:
-      "Athos brings a rare combination of strategic insight and fundraising expertise that has truly elevated our major gifts and development efforts. They've helped us clarify our value proposition, refine our messaging, and identify a broader network of funders and partners. Most importantly, they've met us where we are—offering tailored guidance that makes us stand out in a competitive philanthropic landscape.",
-    author: "Dr. Eric Dunker",
-    title: "Reach University",
-  },
-];
-
-const team = [
-  {
-    name: "Chad Thevenot",
-    title: "Founding Partner and Managing Director",
-    photo:
-      "https://images.squarespace-cdn.com/content/v1/682dc9464d4d034960d4d433/67cdff53-374d-4b76-af02-8b66c134f3ca/64d3ee216e88d7304dfed8fa_Thevenot%2C+Chad.jpg",
-    description:
-      "Strategic education and nonprofit leader with 30+ years advancing mission-driven organizations.",
-  },
-  {
-    name: "Pano Kanelos",
-    title: "Founding Partner",
-    photo:
-      "https://images.squarespace-cdn.com/content/v1/682dc9464d4d034960d4d433/6adc68ef-2d5c-4edd-a42e-932e57d360ca/64d3ab91752dffd7a5b2537f_Kanelos%2C+Pano+1.jpg",
-    description:
-      "Nationally recognized academic leader advising on institutional growth and transformation.",
-  },
-];
+import SiteFooter from "@/components/SiteFooter";
+import { getCollection, getPage, paragraphs } from "@/lib/cms";
+import { LOGO_WHITE, MOUNTAIN_WATERMARK, NAVY, CREAM } from "@/lib/brand";
 
 export default function Home() {
+  const page = getPage("home");
+  const site = getPage("site");
+  const clients = getCollection("clients");
+  const testimonials = getCollection("testimonials");
+  const team = getCollection("team").filter((p) => p.group === "founding-partner");
+
   return (
     <main style={{ background: CREAM, color: NAVY }}>
       <Nav />
@@ -88,7 +49,7 @@ export default function Home() {
               className="text-xs font-medium uppercase tracking-[0.3em]"
               style={{ color: NAVY, opacity: 0.5 }}
             >
-              Strategic Advisory &amp; Execution
+              {page.heroEyebrow}
             </span>
           </div>
 
@@ -97,9 +58,13 @@ export default function Home() {
               className="relative max-w-3xl font-[family-name:var(--font-playfair)] font-bold leading-none tracking-tight"
               style={{ fontSize: "clamp(3.5rem, 9vw, 9rem)", color: NAVY }}
             >
-              From Idea
-              <br />
-              <span className="italic">to Impact.</span>
+              {page.heroTitle}
+              {page.heroTitleItalic && (
+                <>
+                  <br />
+                  <span className="italic">{page.heroTitleItalic}</span>
+                </>
+              )}
             </h1>
           </div>
 
@@ -107,8 +72,7 @@ export default function Home() {
             className="mt-10 max-w-xl text-lg lg:text-xl font-light leading-relaxed opacity-0-start animate-fade-up delay-200"
             style={{ color: "#5A6A7A" }}
           >
-            Building and renewing the institutions that sustain a free and
-            flourishing society.
+            {page.heroSubtitle}
           </p>
 
           <div className="mt-14 opacity-0-start animate-fade-up delay-300">
@@ -117,7 +81,7 @@ export default function Home() {
               className="inline-flex items-center gap-3 px-8 py-4 text-sm font-medium tracking-widest uppercase transition-opacity duration-300 hover:opacity-80"
               style={{ background: NAVY, color: CREAM }}
             >
-              Learn More
+              {page.heroCtaLabel}
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden>
                 <path
                   d="M1 7h12M7 1l6 6-6 6"
@@ -160,39 +124,19 @@ export default function Home() {
               className="text-xs font-medium tracking-[0.3em] uppercase"
               style={{ color: NAVY, opacity: 0.5 }}
             >
-              Who We Are
+              {page.aboutEyebrow}
             </span>
             <h2
               className="font-[family-name:var(--font-playfair)] font-bold mt-5 leading-tight"
               style={{ fontSize: "clamp(2.5rem, 4vw, 4rem)", color: NAVY }}
             >
-              Builders and Partners.
+              {page.aboutHeading}
             </h2>
           </div>
           <div className="space-y-6 font-light leading-relaxed text-lg" style={{ color: "#5A6A7A" }}>
-            <p>
-              Traditional advisory firms deliver expensive reports and slow-moving
-              strategies. At Athos, we do the opposite. Our Fractional Social
-              Ventures model combines rapid strategic visioning with a
-              high-performance executive strike team to help launch, renew, and
-              scale bold ventures in record time. We help emerging institutions
-              go from 0 to 1 and high-potential institutions go from 1 to 10.
-            </p>
-            <p>
-              We work alongside founders, funders, and leaders to develop a
-              clear, differentiated vision and strategic roadmap within weeks,
-              then mobilize a lean, senior-level team to build organizational
-              capacity, attract philanthropic capital, and secure the early wins
-              that create momentum. Our team consists of the builders, operators,
-              and entrepreneurs who have helped create and lead some of the
-              country&apos;s most distinctive and impactful social ventures.
-            </p>
-            <p>
-              We believe lasting impact comes from courageous vision,
-              entrepreneurial execution, authentic community-building,
-              intellectual pluralism, institutional independence, and a relentless
-              focus on results.
-            </p>
+            {paragraphs(page.aboutBody).map((text, i) => (
+              <p key={i}>{text}</p>
+            ))}
           </div>
         </div>
       </section>
@@ -210,7 +154,7 @@ export default function Home() {
               className="text-xs font-medium tracking-[0.3em] uppercase"
               style={{ color: NAVY, opacity: 0.5 }}
             >
-              Partners &amp; Clients
+              {page.clientsEyebrow}
             </span>
           </div>
 
@@ -218,7 +162,7 @@ export default function Home() {
             className="font-[family-name:var(--font-playfair)] font-bold mb-16 leading-tight max-w-lg"
             style={{ fontSize: "clamp(2rem, 3.5vw, 3rem)", color: NAVY }}
           >
-            Trusted by institutions shaping the future.
+            {page.clientsHeading}
           </h2>
 
           <ClientsCarousel clients={clients} />
@@ -237,7 +181,7 @@ export default function Home() {
               className="text-xs font-medium tracking-[0.3em] uppercase"
               style={{ color: NAVY, opacity: 0.5 }}
             >
-              What Clients Say
+              {page.testimonialsEyebrow}
             </span>
           </div>
 
@@ -245,16 +189,16 @@ export default function Home() {
             className="font-[family-name:var(--font-playfair)] font-bold mb-16 leading-tight"
             style={{ fontSize: "clamp(2rem, 3.5vw, 3rem)", color: NAVY }}
           >
-            Proven results. Real partnerships.
+            {page.testimonialsHeading}
           </h2>
 
           <div
             className="grid lg:grid-cols-2 gap-px"
             style={{ background: "rgba(28,43,58,0.08)" }}
           >
-            {testimonials.map((t, i) => (
+            {testimonials.map((t) => (
               <div
-                key={i}
+                key={t.slug}
                 className="testimonial-card p-8 lg:p-12 flex flex-col justify-between gap-8"
               >
                 <div>
@@ -276,10 +220,10 @@ export default function Home() {
                   style={{ borderTop: "1px solid rgba(28,43,58,0.1)" }}
                 >
                   <p className="font-medium text-sm tracking-wide" style={{ color: NAVY }}>
-                    {t.author}
+                    {t.title}
                   </p>
                   <p className="text-sm mt-1" style={{ color: "#5A6A7A" }}>
-                    {t.title}
+                    {t.affiliation}
                   </p>
                 </div>
               </div>
@@ -301,7 +245,7 @@ export default function Home() {
               className="text-xs font-medium tracking-[0.3em] uppercase"
               style={{ color: NAVY, opacity: 0.5 }}
             >
-              Our People
+              {page.teamEyebrow}
             </span>
           </div>
 
@@ -309,21 +253,23 @@ export default function Home() {
             className="font-[family-name:var(--font-playfair)] font-bold mb-20 leading-tight"
             style={{ fontSize: "clamp(2rem, 3.5vw, 3rem)", color: NAVY }}
           >
-            Founding Partners
+            {page.teamHeading}
           </h2>
 
           <div className="grid md:grid-cols-2 gap-12 lg:gap-20">
             {team.map((person) => (
-              <div key={person.name} className="group">
+              <div key={person.slug} className="group">
                 {/* Photo */}
                 <div className="relative overflow-hidden mb-8" style={{ aspectRatio: "4/5" }}>
+                  {person.photo && (
                   <Image
                     src={person.photo}
-                    alt={person.name}
+                    alt={person.title}
                     fill
                     className="object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-700"
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
+                  )}
                   <div
                     className="absolute inset-0 transition-opacity duration-500 group-hover:opacity-0"
                     style={{ background: "rgba(28,43,58,0.08)" }}
@@ -338,16 +284,16 @@ export default function Home() {
                   className="font-[family-name:var(--font-playfair)] text-2xl font-bold"
                   style={{ color: NAVY }}
                 >
-                  {person.name}
+                  {person.title}
                 </h3>
                 <p
                   className="text-xs font-medium tracking-widest uppercase mt-1 mb-4"
                   style={{ color: NAVY, opacity: 0.5 }}
                 >
-                  {person.title}
+                  {person.role}
                 </p>
                 <p className="font-light leading-relaxed" style={{ color: "#5A6A7A" }}>
-                  {person.description}
+                  {person.homeSummary || person.bio}
                 </p>
               </div>
             ))}
@@ -364,7 +310,7 @@ export default function Home() {
         <div className="max-w-3xl mx-auto">
           <Image
             src={LOGO_WHITE}
-            alt="The Athos Group"
+            alt={site.siteName}
             width={280}
             height={96}
             className="h-20 sm:h-24 lg:h-28 w-auto mx-auto mb-12 opacity-90"
@@ -373,51 +319,38 @@ export default function Home() {
             className="text-xs font-medium tracking-[0.3em] uppercase"
             style={{ color: CREAM, opacity: 0.5 }}
           >
-            Get in Touch
+            {page.contactEyebrow}
           </span>
           <h2
             className="font-[family-name:var(--font-playfair)] font-bold mt-6 mb-8 leading-tight"
             style={{ fontSize: "clamp(2.5rem, 5vw, 5rem)", color: CREAM }}
           >
-            Ready to build
-            <br />
-            <span className="italic">something lasting?</span>
+            {page.contactTitle}
+            {page.contactTitleItalic && (
+              <>
+                <br />
+                <span className="italic">{page.contactTitleItalic}</span>
+              </>
+            )}
           </h2>
           <p
             className="font-light text-lg mb-12 leading-relaxed"
             style={{ color: CREAM, opacity: 0.6 }}
           >
-            We work with a select group of organizations committed to ideas that
-            matter. If that sounds like you, we&apos;d like to hear from you.
+            {page.contactBody}
           </p>
           <Link
             href="/contact"
             className="inline-flex items-center gap-3 px-10 py-5 text-sm font-medium tracking-widest uppercase transition-all duration-300 hover:opacity-80"
             style={{ border: `1px solid ${CREAM}`, color: CREAM }}
           >
-            Contact Us
+            {page.contactButtonLabel}
           </Link>
         </div>
       </section>
 
       {/* ── FOOTER ────────────────────────────────────────────── */}
-      <footer
-        className="py-10 px-6 lg:px-12"
-        style={{ background: NAVY, borderTop: "1px solid rgba(248,245,238,0.1)" }}
-      >
-        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-          <Image
-            src={LOGO_WHITE}
-            alt="The Athos Group"
-            width={120}
-            height={42}
-            className="h-7 w-auto opacity-80"
-          />
-          <span className="text-xs tracking-wide" style={{ color: CREAM, opacity: 0.4 }}>
-            &copy; {new Date().getFullYear()} The Athos Group, LLC. All rights reserved.
-          </span>
-        </div>
-      </footer>
+      <SiteFooter gutter="lg:px-12" />
     </main>
   );
 }
