@@ -1,26 +1,7 @@
 {
-  "commit": "100047ba806d89d883794f5ccf013b1780846c0d",
-  "generated": "2026-10-06T17:18:04.212Z",
+  "commit": "5f1a5d2c3c7f34532b520ec5ef6460ff1c135751",
+  "generated": "2026-10-06T17:18:14.721Z",
   "metadata": [
-    {
-      "__outstatic": {
-        "commit": "319bc435442a965ff484711293152a3539544c30",
-        "hash": "2965965996",
-        "path": "outstatic/content/clients/zz-qa-client.md"
-      },
-      "author": {
-        "name": "",
-        "picture": "https://avatars.githubusercontent.com/u/295913350?v=4"
-      },
-      "collection": "clients",
-      "logo": "/images/uploads/test-logo-EyNT.png",
-      "order": 0,
-      "publishedAt": "2026-10-06T17:01:09.671Z",
-      "slug": "zz-qa-client",
-      "status": "published",
-      "title": "ZZ QA Client",
-      "url": "https://example.com/qa-client"
-    },
     {
       "__outstatic": {
         "commit": "0732e30c2caa77067cdc64719455d8e29d252f9d",
