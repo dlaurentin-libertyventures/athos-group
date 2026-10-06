@@ -1,19 +1,7 @@
 {
-  "commit": "f95f2f396b2f859ec2e5c976c4e7c0777623b5ca",
-  "generated": "2026-10-06T17:01:20.851Z",
+  "commit": "6587e6683465eb6f4eb5889ea999c6450a0b6da3",
+  "generated": "2026-10-06T17:19:02.213Z",
   "media": [
-    {
-      "__outstatic": {
-        "commit": "f95f2f396b2f859ec2e5c976c4e7c0777623b5ca",
-        "hash": "184464823",
-        "path": "public/images/uploads/test-logo-EyNT.png"
-      },
-      "alt": "",
-      "filename": "test-logo-EyNT.png",
-      "publishedAt": "2026-10-06T17:01:20.851Z",
-      "source": "images",
-      "type": "image"
-    },
     {
       "__outstatic": {
         "commit": "",
