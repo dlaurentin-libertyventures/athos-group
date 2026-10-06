@@ -1,6 +1,6 @@
 {
-  "commit": "7ebeed70e6a9f6137e55dccc60df4acc85e51e30",
-  "generated": "2026-10-06T17:01:02.605Z",
+  "commit": "319bc435442a965ff484711293152a3539544c30",
+  "generated": "2026-10-06T17:01:26.736Z",
   "metadata": [
     {
       "__outstatic": {
@@ -23,6 +23,25 @@
       "status": "draft",
       "summary": "First paragraph of the QA test summary.\n\nSecond paragraph after a blank line.",
       "title": "ZZ Test News (delete me)"
+    },
+    {
+      "__outstatic": {
+        "commit": "319bc435442a965ff484711293152a3539544c30",
+        "hash": "2965965996",
+        "path": "outstatic/content/clients/zz-qa-client.md"
+      },
+      "author": {
+        "name": "",
+        "picture": "https://avatars.githubusercontent.com/u/295913350?v=4"
+      },
+      "collection": "clients",
+      "logo": "/images/uploads/test-logo-EyNT.png",
+      "order": 0,
+      "publishedAt": "2026-10-06T17:01:09.671Z",
+      "slug": "zz-qa-client",
+      "status": "published",
+      "title": "ZZ QA Client",
+      "url": "https://example.com/qa-client"
     }
   ]
 }
