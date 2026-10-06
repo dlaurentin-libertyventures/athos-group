@@ -12,8 +12,8 @@ seoDescription: Building and renewing the institutions that sustain a free and f
 navAbout: About
 navPeople: Our People
 navServices: Our Services
-navNews: News QA
+navNews: News
 navContact: Contact
-footerCopyright: The Athos Group, LLC. All rights reserved. [QA]
+footerCopyright: The Athos Group, LLC. All rights reserved.
 ---
 

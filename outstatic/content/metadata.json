@@ -1,6 +1,6 @@
 {
-  "commit": "a7fe59fecd11fb628ed380de22a693aa65d8e40d",
-  "generated": "2026-10-06T17:16:36.865Z",
+  "commit": "1ef37f4cae6a43029e56ab32955ec48f31a21af7",
+  "generated": "2026-10-06T17:16:53.163Z",
   "metadata": [
     {
       "__outstatic": {
@@ -122,31 +122,6 @@
     },
     {
       "__outstatic": {
-        "commit": "01aabd1d54cb44d2da562ff83e08eb50b16060c9",
-        "hash": "3799548709",
-        "path": "outstatic/content/_singletons/site.md"
-      },
-      "author": {
-        "name": "The Athos Group",
-        "picture": ""
-      },
-      "collection": "_singletons",
-      "footerCopyright": "The Athos Group, LLC. All rights reserved. [QA]",
-      "navAbout": "About",
-      "navContact": "Contact",
-      "navNews": "News QA",
-      "navPeople": "Our People",
-      "navServices": "Our Services",
-      "publishedAt": "2026-09-30T12:00:00.000Z",
-      "seoDescription": "Building and renewing the institutions that sustain a free and flourishing society.",
-      "seoTitle": "The Athos Group — From Idea to Impact",
-      "siteName": "The Athos Group",
-      "slug": "site",
-      "status": "published",
-      "title": "Site Settings"
-    },
-    {
-      "__outstatic": {
         "commit": "50986fc49188382fc626459d6a47b2d276127ce5",
         "hash": "2784860196",
         "path": "outstatic/content/_singletons/contact.md"
@@ -204,6 +179,31 @@
       "testimonialsEyebrow": "What Clients Say",
       "testimonialsHeading": "Proven results. Real partnerships.",
       "title": "Home"
+    },
+    {
+      "__outstatic": {
+        "commit": "1ef37f4cae6a43029e56ab32955ec48f31a21af7",
+        "hash": "688741329",
+        "path": "outstatic/content/_singletons/site.md"
+      },
+      "author": {
+        "name": "The Athos Group",
+        "picture": ""
+      },
+      "collection": "_singletons",
+      "footerCopyright": "The Athos Group, LLC. All rights reserved.",
+      "navAbout": "About",
+      "navContact": "Contact",
+      "navNews": "News",
+      "navPeople": "Our People",
+      "navServices": "Our Services",
+      "publishedAt": "2026-09-30T12:00:00.000Z",
+      "seoDescription": "Building and renewing the institutions that sustain a free and flourishing society.",
+      "seoTitle": "The Athos Group — From Idea to Impact",
+      "siteName": "The Athos Group",
+      "slug": "site",
+      "status": "published",
+      "title": "Site Settings"
     }
   ]
 }
