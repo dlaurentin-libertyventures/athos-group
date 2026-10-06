@@ -1,6 +1,6 @@
 {
-  "commit": "8f652daace2e6d1817e1ae121fd01a2cc4865e71",
-  "generated": "2026-10-06T17:06:40.407Z",
+  "commit": "b7605009c48f9d8ba5bbde5a6228b4c089a1fae5",
+  "generated": "2026-10-06T17:06:59.662Z",
   "metadata": [
     {
       "__outstatic": {
@@ -144,6 +144,41 @@
       "slug": "contact",
       "status": "published",
       "title": "Contact"
+    },
+    {
+      "__outstatic": {
+        "commit": "b7605009c48f9d8ba5bbde5a6228b4c089a1fae5",
+        "hash": "3780589208",
+        "path": "outstatic/content/_singletons/home.md"
+      },
+      "aboutBody": "Traditional advisory firms deliver expensive reports and slow-moving strategies. At Athos, we do the opposite. Our Fractional Social Ventures model combines rapid strategic visioning with a high-performance executive strike team to help launch, renew, and scale bold ventures in record time. We help emerging institutions go from 0 to 1 and high-potential institutions go from 1 to 10.\n\nWe work alongside founders, funders, and leaders to develop a clear, differentiated vision and strategic roadmap within weeks, then mobilize a lean, senior-level team to build organizational capacity, attract philanthropic capital, and secure the early wins that create momentum. Our team consists of the builders, operators, and entrepreneurs who have helped create and lead some of the country's most distinctive and impactful social ventures.\n\nWe believe lasting impact comes from courageous vision, entrepreneurial execution, authentic community-building, intellectual pluralism, institutional independence, and a relentless focus on results.",
+      "aboutEyebrow": "Who We Are",
+      "aboutHeading": "Builders and Partners.",
+      "author": {
+        "name": "The Athos Group",
+        "picture": ""
+      },
+      "clientsEyebrow": "Partners & Clients",
+      "clientsHeading": "Trusted by institutions shaping the future.",
+      "collection": "_singletons",
+      "contactBody": "We work with a select group of organizations committed to ideas that matter. If that sounds like you, we'd like to hear from you.",
+      "contactButtonLabel": "Contact Us",
+      "contactEyebrow": "Get in Touch",
+      "contactTitle": "Ready to build",
+      "contactTitleItalic": "something lasting?",
+      "heroCtaLabel": "Learn More [QA]",
+      "heroEyebrow": "Strategic Advisory & Execution",
+      "heroSubtitle": "Building and renewing the institutions that sustain a free and flourishing society.",
+      "heroTitle": "From Idea",
+      "heroTitleItalic": "to Impact.",
+      "publishedAt": "2026-09-30T12:00:00.000Z",
+      "slug": "home",
+      "status": "published",
+      "teamEyebrow": "Our People",
+      "teamHeading": "Founding Partners",
+      "testimonialsEyebrow": "What Clients Say",
+      "testimonialsHeading": "Proven results. Real partnerships.",
+      "title": "Home"
     }
   ]
 }

@@ -10,8 +10,8 @@
   {
     "title": "Home",
     "slug": "home",
-    "path": "outstatic/content/_singletons/home.md",
     "directory": "outstatic/content/_singletons",
+    "path": "outstatic/content/_singletons/home.md",
     "publishedAt": "2026-09-30T12:00:00.000Z",
     "status": "published"
   },
