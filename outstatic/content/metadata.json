@@ -1,6 +1,6 @@
 {
-  "commit": "b7605009c48f9d8ba5bbde5a6228b4c089a1fae5",
-  "generated": "2026-10-06T17:06:59.662Z",
+  "commit": "01aabd1d54cb44d2da562ff83e08eb50b16060c9",
+  "generated": "2026-10-06T17:07:17.256Z",
   "metadata": [
     {
       "__outstatic": {
@@ -179,6 +179,31 @@
       "testimonialsEyebrow": "What Clients Say",
       "testimonialsHeading": "Proven results. Real partnerships.",
       "title": "Home"
+    },
+    {
+      "__outstatic": {
+        "commit": "01aabd1d54cb44d2da562ff83e08eb50b16060c9",
+        "hash": "3799548709",
+        "path": "outstatic/content/_singletons/site.md"
+      },
+      "author": {
+        "name": "The Athos Group",
+        "picture": ""
+      },
+      "collection": "_singletons",
+      "footerCopyright": "The Athos Group, LLC. All rights reserved. [QA]",
+      "navAbout": "About",
+      "navContact": "Contact",
+      "navNews": "News QA",
+      "navPeople": "Our People",
+      "navServices": "Our Services",
+      "publishedAt": "2026-09-30T12:00:00.000Z",
+      "seoDescription": "Building and renewing the institutions that sustain a free and flourishing society.",
+      "seoTitle": "The Athos Group — From Idea to Impact",
+      "siteName": "The Athos Group",
+      "slug": "site",
+      "status": "published",
+      "title": "Site Settings"
     }
   ]
 }

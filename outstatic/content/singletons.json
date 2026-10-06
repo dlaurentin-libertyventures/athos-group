@@ -2,8 +2,8 @@
   {
     "title": "Site Settings",
     "slug": "site",
-    "path": "outstatic/content/_singletons/site.md",
     "directory": "outstatic/content/_singletons",
+    "path": "outstatic/content/_singletons/site.md",
     "publishedAt": "2026-09-30T12:00:00.000Z",
     "status": "published"
   },
