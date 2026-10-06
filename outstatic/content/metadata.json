@@ -1,6 +1,6 @@
 {
-  "commit": "1ef37f4cae6a43029e56ab32955ec48f31a21af7",
-  "generated": "2026-10-06T17:16:53.163Z",
+  "commit": "9f27287b2f84da95ed3a6e6ed31d826256f085ce",
+  "generated": "2026-10-06T17:17:08.677Z",
   "metadata": [
     {
       "__outstatic": {
@@ -82,25 +82,6 @@
       "slug": "zz-qa-service",
       "status": "published",
       "title": "ZZ QA Service"
-    },
-    {
-      "__outstatic": {
-        "commit": "59a87628895f4105dec2517c59fcada84c580ce3",
-        "hash": "2335488204",
-        "path": "outstatic/content/testimonials/bari-weiss.md"
-      },
-      "affiliation": "CBS News [QA]",
-      "author": {
-        "name": "The Athos Group",
-        "picture": ""
-      },
-      "collection": "testimonials",
-      "order": 3,
-      "publishedAt": "2026-09-30T12:00:00.000Z",
-      "quote": "...You have built an entire fundraising operation from scratch and raised a huge sum of money that only a handful of hundred-year-old universities can muster. We would not be here without you.",
-      "slug": "bari-weiss",
-      "status": "published",
-      "title": "Bari Weiss"
     },
     {
       "__outstatic": {
@@ -204,6 +185,25 @@
       "slug": "site",
       "status": "published",
       "title": "Site Settings"
+    },
+    {
+      "__outstatic": {
+        "commit": "9f27287b2f84da95ed3a6e6ed31d826256f085ce",
+        "hash": "1363110033",
+        "path": "outstatic/content/testimonials/bari-weiss.md"
+      },
+      "affiliation": "CBS News",
+      "author": {
+        "name": "The Athos Group",
+        "picture": ""
+      },
+      "collection": "testimonials",
+      "order": 3,
+      "publishedAt": "2026-09-30T12:00:00.000Z",
+      "quote": "...You have built an entire fundraising operation from scratch and raised a huge sum of money that only a handful of hundred-year-old universities can muster. We would not be here without you.",
+      "slug": "bari-weiss",
+      "status": "published",
+      "title": "Bari Weiss"
     }
   ]
 }
