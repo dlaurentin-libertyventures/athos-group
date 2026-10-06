@@ -1,0 +1,28 @@
+{
+  "commit": "",
+  "generated": "2026-10-06T16:56:20.666Z",
+  "metadata": [
+    {
+      "__outstatic": {
+        "commit": "",
+        "hash": "2387089295",
+        "path": "outstatic/content/news/zz-test-news-delete-me.mdx"
+      },
+      "announcementLabel": "Read QA",
+      "announcementUrl": "https://example.com/qa-test",
+      "author": {
+        "name": "QA Test",
+        "picture": "https://avatars.githubusercontent.com/u/295913350?v=4"
+      },
+      "collection": "news",
+      "image": "/images/uploads/test-logo-kwNj.png",
+      "imageAlt": "QA test logo",
+      "order": 1,
+      "publishedAt": "2026-10-06T16:55:03.450Z",
+      "slug": "zz-test-news-delete-me",
+      "status": "published",
+      "summary": "First paragraph of the QA test summary.\n\nSecond paragraph after a blank line.",
+      "title": "ZZ Test News (delete me)"
+    }
+  ]
+}
