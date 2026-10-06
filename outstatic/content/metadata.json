@@ -1,28 +1,7 @@
 {
-  "commit": "5f1a5d2c3c7f34532b520ec5ef6460ff1c135751",
-  "generated": "2026-10-06T17:18:14.721Z",
+  "commit": "b73c6654d1ad5d4912350eb9282aed1e7eac8377",
+  "generated": "2026-10-06T17:18:25.404Z",
   "metadata": [
-    {
-      "__outstatic": {
-        "commit": "0732e30c2caa77067cdc64719455d8e29d252f9d",
-        "hash": "450828312",
-        "path": "outstatic/content/team/zz-qa-person.md"
-      },
-      "author": {
-        "name": "",
-        "picture": "https://avatars.githubusercontent.com/u/295913350?v=4"
-      },
-      "bio": "QA bio paragraph one.",
-      "collection": "team",
-      "group": "advisor",
-      "order": 99,
-      "photo": "/images/uploads/test-logo-EyNT.png",
-      "publishedAt": "2026-10-06T17:01:33.824Z",
-      "role": "QA Specialist",
-      "slug": "zz-qa-person",
-      "status": "published",
-      "title": "ZZ QA Person"
-    },
     {
       "__outstatic": {
         "commit": "bdf7e2242173cec540c81660899c4c7f745a8c1f",
