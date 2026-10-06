@@ -1,29 +1,7 @@
 {
-  "commit": "f9ae0b0c18178003326a265186ae9a6119e925bb",
-  "generated": "2026-10-06T17:17:23.388Z",
+  "commit": "100047ba806d89d883794f5ccf013b1780846c0d",
+  "generated": "2026-10-06T17:18:04.212Z",
   "metadata": [
-    {
-      "__outstatic": {
-        "commit": "7ebeed70e6a9f6137e55dccc60df4acc85e51e30",
-        "hash": "2608826682",
-        "path": "outstatic/content/news/zz-test-news-delete-me.mdx"
-      },
-      "announcementLabel": "Read QA",
-      "announcementUrl": "https://example.com/qa-test",
-      "author": {
-        "name": "QA Test",
-        "picture": "https://avatars.githubusercontent.com/u/295913350?v=4"
-      },
-      "collection": "news",
-      "image": "/images/uploads/test-logo-kwNj.png",
-      "imageAlt": "QA test logo",
-      "order": 1,
-      "publishedAt": "2026-10-06T16:55:03.450Z",
-      "slug": "zz-test-news-delete-me",
-      "status": "draft",
-      "summary": "First paragraph of the QA test summary.\n\nSecond paragraph after a blank line.",
-      "title": "ZZ Test News (delete me)"
-    },
     {
       "__outstatic": {
         "commit": "319bc435442a965ff484711293152a3539544c30",
