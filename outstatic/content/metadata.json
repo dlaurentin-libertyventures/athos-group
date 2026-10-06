@@ -1,6 +1,6 @@
 {
-  "commit": "13fe9c230b019d41942efacbe868bedd99938bcc",
-  "generated": "2026-10-06T17:06:02.066Z",
+  "commit": "8f652daace2e6d1817e1ae121fd01a2cc4865e71",
+  "generated": "2026-10-06T17:06:40.407Z",
   "metadata": [
     {
       "__outstatic": {
@@ -119,6 +119,31 @@
       "slug": "bottom-up-approaches",
       "status": "published",
       "title": "Bottom-up approaches [QA]"
+    },
+    {
+      "__outstatic": {
+        "commit": "8f652daace2e6d1817e1ae121fd01a2cc4865e71",
+        "hash": "533932191",
+        "path": "outstatic/content/_singletons/contact.md"
+      },
+      "author": {
+        "name": "The Athos Group",
+        "picture": ""
+      },
+      "body": "If you're a courageous leader, visionary founder, or leading philanthropist looking to build the future — reach out. We'd like to hear from you.",
+      "collection": "_singletons",
+      "contactTitle": "Let's build [QA]",
+      "contactTitleItalic": "something lasting.",
+      "email": "chad@athosed.com",
+      "emailLabel": "Email",
+      "eyebrow": "Contact",
+      "headerEyebrow": "The Athos Group",
+      "headerSubtitle": "We work with a select group of organizations committed to ideas that matter.",
+      "headerTitle": "Get in Touch",
+      "publishedAt": "2026-09-30T12:00:00.000Z",
+      "slug": "contact",
+      "status": "published",
+      "title": "Contact"
     }
   ]
 }
