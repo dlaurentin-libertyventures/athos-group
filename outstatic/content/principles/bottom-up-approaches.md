@@ -1,5 +1,5 @@
 ---
-title: Bottom-up approaches [QA]
+title: Bottom-up approaches
 status: published
 author:
   name: The Athos Group
