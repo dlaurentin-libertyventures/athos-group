@@ -1,6 +1,6 @@
 {
-  "commit": "59a87628895f4105dec2517c59fcada84c580ce3",
-  "generated": "2026-10-06T17:05:45.811Z",
+  "commit": "13fe9c230b019d41942efacbe868bedd99938bcc",
+  "generated": "2026-10-06T17:06:02.066Z",
   "metadata": [
     {
       "__outstatic": {
@@ -101,6 +101,24 @@
       "slug": "bari-weiss",
       "status": "published",
       "title": "Bari Weiss"
+    },
+    {
+      "__outstatic": {
+        "commit": "13fe9c230b019d41942efacbe868bedd99938bcc",
+        "hash": "2592190386",
+        "path": "outstatic/content/principles/bottom-up-approaches.md"
+      },
+      "author": {
+        "name": "The Athos Group",
+        "picture": ""
+      },
+      "collection": "principles",
+      "description": "We develop authentic, engaged communities of learners, educators, and supporters. Lasting institutions are built from within — not imposed from above.",
+      "order": 2,
+      "publishedAt": "2026-09-30T12:00:00.000Z",
+      "slug": "bottom-up-approaches",
+      "status": "published",
+      "title": "Bottom-up approaches [QA]"
     }
   ]
 }
