@@ -1,6 +1,6 @@
 {
-  "commit": "300ee8d0fd9b6e597a169cc048f50ec7186d62bb",
-  "generated": "2026-10-14T17:05:00.987Z",
+  "commit": "b4a152205a755ee6cffd3b9a69191326552a3341",
+  "generated": "2026-10-14T17:07:08.634Z",
   "metadata": [
     {
       "__outstatic": {
@@ -123,6 +123,27 @@
       "slug": "contact",
       "status": "published",
       "title": "Contact"
+    },
+    {
+      "__outstatic": {
+        "commit": "b4a152205a755ee6cffd3b9a69191326552a3341",
+        "hash": "1734514299",
+        "path": "outstatic/content/team/diego-laurentin.md"
+      },
+      "author": {
+        "name": "",
+        "picture": "https://avatars.githubusercontent.com/u/295913350?v=4"
+      },
+      "bio": "Test",
+      "collection": "team",
+      "group": "advisor",
+      "order": 9,
+      "photo": "/images/uploads/foto-carnet-YzNT.png",
+      "publishedAt": "2026-10-14T17:05:55.288Z",
+      "role": "Tech spec",
+      "slug": "diego-laurentin",
+      "status": "draft",
+      "title": "Diego Laurentin"
     }
   ]
 }
