@@ -43,3 +43,6 @@ next-env.d.ts
 
 # n8n workflows / templates (local only)
 /n8n/
+
+# outstatic generated types
+/.outstatic/

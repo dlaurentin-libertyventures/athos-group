@@ -1,13 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
-import { newsItems } from "@/lib/news";
+import { getCollection } from "@/lib/cms";
 import { CREAM, MUTED, NAVY } from "@/lib/brand";
 
 type NewsSectionProps = {
   hidden?: boolean;
+  eyebrow: string;
 };
 
-export default function NewsSection({ hidden = false }: NewsSectionProps) {
+export default function NewsSection({ hidden = false, eyebrow }: NewsSectionProps) {
+  const newsItems = getCollection("news");
+
   return (
     <section
       id="news"
@@ -22,14 +25,14 @@ export default function NewsSection({ hidden = false }: NewsSectionProps) {
             className="text-xs font-medium uppercase tracking-[0.3em]"
             style={{ color: NAVY, opacity: 0.5 }}
           >
-            News &amp; Announcements
+            {eyebrow}
           </span>
         </div>
 
         <div className="grid gap-12 lg:grid-cols-3 lg:gap-10">
           {newsItems.map((item) => (
             <article
-              key={item.id}
+              key={item.slug}
               className="flex flex-col border"
               style={{ borderColor: "rgba(28,43,58,0.1)", background: "#fff" }}
             >
