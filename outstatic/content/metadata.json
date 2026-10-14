@@ -1,6 +1,6 @@
 {
-  "commit": "262770e99b06cfa6dc64bccb539edf444bde98d4",
-  "generated": "2026-10-14T16:45:05.232Z",
+  "commit": "0d05d84455fcecfa70907c8ec53e5bd83d8ae4cd",
+  "generated": "2026-10-14T16:49:27.890Z",
   "metadata": [
     {
       "__outstatic": {
@@ -91,8 +91,8 @@
     },
     {
       "__outstatic": {
-        "commit": "262770e99b06cfa6dc64bccb539edf444bde98d4",
-        "hash": "183521934",
+        "commit": "0d05d84455fcecfa70907c8ec53e5bd83d8ae4cd",
+        "hash": "3693489814",
         "path": "outstatic/content/_singletons/home.md"
       },
       "aboutBody": "Traditional advisory firms deliver expensive reports and slow-moving strategies. At Athos, we do the opposite. Our Fractional Social Ventures model combines rapid strategic visioning with a high-performance executive strike team to help launch, renew, and scale bold ventures in record time. We help emerging institutions go from 0 to 1 and high-potential institutions go from 1 to 10.\n\nWe work alongside founders, funders, and leaders to develop a clear, differentiated vision and strategic roadmap within weeks, then mobilize a lean, senior-level team to build organizational capacity, attract philanthropic capital, and secure the early wins that create momentum. Our team consists of the builders, operators, and entrepreneurs who have helped create and lead some of the country's most distinctive and impactful social ventures.\n\nWe believe lasting impact comes from courageous vision, entrepreneurial execution, authentic community-building, intellectual pluralism, institutional independence, and a relentless focus on results.",
@@ -112,9 +112,9 @@
       "contactTitleItalic": "something lasting?",
       "heroCtaLabel": "Learn More",
       "heroEyebrow": "Strategic Advisory & Execution",
-      "heroSubtitle": "This is a test on how outstatic works",
-      "heroTitle": "Diego",
-      "heroTitleItalic": "Laurentin",
+      "heroSubtitle": "Building and renewing the institutions that sustain a free and flourishing society.",
+      "heroTitle": "From Idea",
+      "heroTitleItalic": "To Impact",
       "publishedAt": "2026-09-30T12:00:00.000Z",
       "slug": "home",
       "status": "published",
