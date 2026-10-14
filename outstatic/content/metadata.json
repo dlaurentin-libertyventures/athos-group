@@ -1,6 +1,6 @@
 {
-  "commit": "b4a152205a755ee6cffd3b9a69191326552a3341",
-  "generated": "2026-10-14T17:07:08.634Z",
+  "commit": "72a307fae7abda75a3538fdddea1153d027bbeae",
+  "generated": "2026-10-14T17:10:06.890Z",
   "metadata": [
     {
       "__outstatic": {
@@ -126,8 +126,8 @@
     },
     {
       "__outstatic": {
-        "commit": "b4a152205a755ee6cffd3b9a69191326552a3341",
-        "hash": "1734514299",
+        "commit": "72a307fae7abda75a3538fdddea1153d027bbeae",
+        "hash": "1136337952",
         "path": "outstatic/content/team/diego-laurentin.md"
       },
       "author": {
@@ -142,7 +142,7 @@
       "publishedAt": "2026-10-14T17:05:55.288Z",
       "role": "Tech spec",
       "slug": "diego-laurentin",
-      "status": "draft",
+      "status": "published",
       "title": "Diego Laurentin"
     }
   ]
