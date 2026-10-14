@@ -1,6 +1,18 @@
 {
-  "commit": "8344ec9ecdaea46f4bf86070822d9438bc7d9d24",
-  "generated": "2026-10-06T17:19:16.175Z",
+  "commit": "bc85c1196fb63a668240566322c9972cec0fd07b",
+  "generated": "2026-10-14T17:06:38.651Z",
   "media": [
+    {
+      "__outstatic": {
+        "commit": "bc85c1196fb63a668240566322c9972cec0fd07b",
+        "hash": "3508060873",
+        "path": "public/images/uploads/foto-carnet-YzNT.png"
+      },
+      "alt": "",
+      "filename": "foto-carnet-YzNT.png",
+      "publishedAt": "2026-10-14T17:06:38.651Z",
+      "source": "images",
+      "type": "image"
+    }
   ]
 }
