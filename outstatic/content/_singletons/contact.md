@@ -8,7 +8,7 @@ slug: contact
 publishedAt: 2026-09-30T12:00:00.000Z
 headerEyebrow: The Athos Group
 headerTitle: Get in Touch
-headerSubtitle: We work with a select group of organizations committed to ideas that matter.
+headerSubtitle: We work with a select group of organizations committed to ideas that matter. ---
 eyebrow: Contact
 contactTitle: Let's build
 contactTitleItalic: something lasting.

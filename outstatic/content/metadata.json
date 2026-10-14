@@ -1,32 +1,7 @@
 {
-  "commit": "0d05d84455fcecfa70907c8ec53e5bd83d8ae4cd",
-  "generated": "2026-10-14T16:49:27.890Z",
+  "commit": "300ee8d0fd9b6e597a169cc048f50ec7186d62bb",
+  "generated": "2026-10-14T17:05:00.987Z",
   "metadata": [
-    {
-      "__outstatic": {
-        "commit": "50986fc49188382fc626459d6a47b2d276127ce5",
-        "hash": "2784860196",
-        "path": "outstatic/content/_singletons/contact.md"
-      },
-      "author": {
-        "name": "The Athos Group",
-        "picture": ""
-      },
-      "body": "If you're a courageous leader, visionary founder, or leading philanthropist looking to build the future — reach out. We'd like to hear from you.",
-      "collection": "_singletons",
-      "contactTitle": "Let's build",
-      "contactTitleItalic": "something lasting.",
-      "email": "chad@athosed.com",
-      "emailLabel": "Email",
-      "eyebrow": "Contact",
-      "headerEyebrow": "The Athos Group",
-      "headerSubtitle": "We work with a select group of organizations committed to ideas that matter.",
-      "headerTitle": "Get in Touch",
-      "publishedAt": "2026-09-30T12:00:00.000Z",
-      "slug": "contact",
-      "status": "published",
-      "title": "Contact"
-    },
     {
       "__outstatic": {
         "commit": "1ef37f4cae6a43029e56ab32955ec48f31a21af7",
@@ -123,6 +98,31 @@
       "testimonialsEyebrow": "What Clients Say",
       "testimonialsHeading": "Proven results. Real partnerships.",
       "title": "Home"
+    },
+    {
+      "__outstatic": {
+        "commit": "300ee8d0fd9b6e597a169cc048f50ec7186d62bb",
+        "hash": "954115970",
+        "path": "outstatic/content/_singletons/contact.md"
+      },
+      "author": {
+        "name": "The Athos Group",
+        "picture": ""
+      },
+      "body": "If you're a courageous leader, visionary founder, or leading philanthropist looking to build the future — reach out. We'd like to hear from you.",
+      "collection": "_singletons",
+      "contactTitle": "Let's build",
+      "contactTitleItalic": "something lasting.",
+      "email": "chad@athosed.com",
+      "emailLabel": "Email",
+      "eyebrow": "Contact",
+      "headerEyebrow": "The Athos Group",
+      "headerSubtitle": "We work with a select group of organizations committed to ideas that matter. ---",
+      "headerTitle": "Get in Touch",
+      "publishedAt": "2026-09-30T12:00:00.000Z",
+      "slug": "contact",
+      "status": "published",
+      "title": "Contact"
     }
   ]
 }
