@@ -7,9 +7,9 @@ author:
 slug: home
 publishedAt: 2026-09-30T12:00:00.000Z
 heroEyebrow: Strategic Advisory & Execution
-heroTitle: From Idea
-heroTitleItalic: to Impact.
-heroSubtitle: Building and renewing the institutions that sustain a free and flourishing society.
+heroTitle: Diego
+heroTitleItalic: Laurentin
+heroSubtitle: This is a test on how outstatic works
 heroCtaLabel: Learn More
 aboutEyebrow: Who We Are
 aboutHeading: Builders and Partners.
