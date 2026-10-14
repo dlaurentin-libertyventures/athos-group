@@ -1,6 +1,6 @@
 {
-  "commit": "ad71c3429010af5d8d2535998b67e709dda0be49",
-  "generated": "2026-10-14T17:11:58.136Z",
+  "commit": "790c71d29bbe2e0657e5e97325d9db9d8af5bbf8",
+  "generated": "2026-10-14T17:12:41.170Z",
   "metadata": [
     {
       "__outstatic": {
@@ -101,8 +101,8 @@
     },
     {
       "__outstatic": {
-        "commit": "300ee8d0fd9b6e597a169cc048f50ec7186d62bb",
-        "hash": "954115970",
+        "commit": "790c71d29bbe2e0657e5e97325d9db9d8af5bbf8",
+        "hash": "873204757",
         "path": "outstatic/content/_singletons/contact.md"
       },
       "author": {
@@ -117,7 +117,7 @@
       "emailLabel": "Email",
       "eyebrow": "Contact",
       "headerEyebrow": "The Athos Group",
-      "headerSubtitle": "We work with a select group of organizations committed to ideas that matter. ---",
+      "headerSubtitle": "We work with a select group of organizations committed to ideas that matter. ",
       "headerTitle": "Get in Touch",
       "publishedAt": "2026-09-30T12:00:00.000Z",
       "slug": "contact",
