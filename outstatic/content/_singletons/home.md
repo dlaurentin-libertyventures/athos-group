@@ -8,7 +8,7 @@ slug: home
 publishedAt: 2026-09-30T12:00:00.000Z
 heroEyebrow: Strategic Advisory & Execution
 heroTitle: From Idea
-heroTitleItalic: To Impact
+heroTitleItalic: to Impact.
 heroSubtitle: Building and renewing the institutions that sustain a free and flourishing society.
 heroCtaLabel: Learn More
 aboutEyebrow: Who We Are
