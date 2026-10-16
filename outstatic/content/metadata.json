@@ -1,6 +1,6 @@
 {
-  "commit": "ae15e41ee7dc96271c54b6fd0345e8fe85b1b59b",
-  "generated": "2026-10-16T17:36:44.100Z",
+  "commit": "48d425c9120726c4c8bd6840a5b837c392968231",
+  "generated": "2026-10-16T17:38:59.518Z",
   "metadata": [
     {
       "__outstatic": {
@@ -101,8 +101,8 @@
     },
     {
       "__outstatic": {
-        "commit": "ae15e41ee7dc96271c54b6fd0345e8fe85b1b59b",
-        "hash": "322435571",
+        "commit": "48d425c9120726c4c8bd6840a5b837c392968231",
+        "hash": "873204757",
         "path": "outstatic/content/_singletons/contact.md"
       },
       "author": {
@@ -112,7 +112,7 @@
       "body": "If you're a courageous leader, visionary founder, or leading philanthropist looking to build the future — reach out. We'd like to hear from you.",
       "collection": "_singletons",
       "contactTitle": "Let's build",
-      "contactTitleItalic": "something lasting. -",
+      "contactTitleItalic": "something lasting.",
       "email": "chad@athosed.com",
       "emailLabel": "Email",
       "eyebrow": "Contact",
